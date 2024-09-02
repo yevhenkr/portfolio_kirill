@@ -6,15 +6,11 @@ import {Portfolio} from "./common/layout/section/portfolio/Portfolio.tsx";
 
 
 export function App() {
-  return (
-    <AppStyle >
-      {/*<video controls>*/}
-      {/*  <source src="../src/assets/video/fox.mp4" type="video/mp4" />*/}
-      {/*  Ваш браузер не поддерживает воспроизведение видео.*/}
-      {/*</video>*/}
-        <Portfolio/>
-    </AppStyle>
-  )
+    return (
+        <AppStyle>
+            <Portfolio/>
+        </AppStyle>
+    )
 
 }
 
@@ -29,8 +25,9 @@ const AppStyle = styled.div`
     font-size: 35px;
     color: ${myTheme.color.navy};
 
-    @media (max-width:${myTheme.screen.medium}) {
+    @media (max-width: ${myTheme.screen.medium}) {
         max-width: 768px;
         width: 100%;
     }
 `;
+
