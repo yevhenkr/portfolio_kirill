@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { myTheme } from "../../../styles/Theme.styled.tsx";
-import logo from "../../../assets/img/photoUser.webp"; // Импортируйте изображение
+import photo from "../../../assets/img/photoUser.webp"; // Импортируйте изображение
 
 export const Main = () => {
     return (
@@ -13,32 +13,27 @@ export const Main = () => {
     );
 };
 
-const TitleWrap = styled.div`
-    display: flex;
-    flex-direction: column;
-    max-width: 630px;
-    margin: auto 0; /* Центрирует содержимое */
-    @media (max-width: ${myTheme.screen.small}) {
-        max-width: 290px; /* Уменьшение ширины для маленьких экранов */
-    }
-`;
-
 const FullScreenBackground = styled.main`
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
-    padding-bottom: 20px;
-    height: 100vh; /* Установите высоту в 100% от высоты окна просмотра */
-    padding-top: 265px;
-    padding-bottom: 200px;
+    height: 100vh;
+    padding-top: 0;
     font-family: Poppins, sans-serif;
     font-weight: bold;
     font-size: 40px;
-    background-image: url(${logo}); /* Указываем правильный путь к изображению */
-    background-size: cover; /* Растягивает изображение, сохраняя соотношение сторон */
-    background-position: center; /* Центрирует изображение */
-    background-repeat: no-repeat; /* Не повторяет изображение */
+    background-image: url(${photo});
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+`;
+const TitleWrap = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center; /* Центрирует содержимое по горизонтали */
+text-align: center; /* Центрирует текст внутри контейнера */
 `;
 
 const StyledH1 = styled.h1`
