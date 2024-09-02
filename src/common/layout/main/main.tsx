@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { myTheme } from "../../../styles/Theme.styled.tsx";
-import logo from "../../../assets/img/userPhoto.webp"; // Импортируйте изображение
+import logo from "../../../assets/img/photoUser.webp"; // Импортируйте изображение
 
 export const Main = () => {
     return (
