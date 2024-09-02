@@ -1,5 +1,7 @@
 import {createRoot} from 'react-dom/client'
 import { App } from './App.tsx'
+import './index.css';
+
 import {myTheme} from "./styles/Theme.styled.tsx";
 import {ThemeProvider} from "styled-components";
 
