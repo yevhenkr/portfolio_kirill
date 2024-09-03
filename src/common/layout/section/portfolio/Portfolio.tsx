@@ -5,7 +5,7 @@ import second from "../../../../assets/img/Port3.png";
 import therd from "../../../../assets/img/Port3.png";
 import {myTheme} from "../../../../styles/Theme.styled";
 import {PortfolioCard} from "./PortfolioCard";
-import {VideoWrapper} from "../../../ui/VideoWrapper/VideoWrapper";
+// import {VideoWrapper} from "../../../ui/VideoWrapper/VideoWrapper";
 
 export const Portfolio = () => {
     return (
@@ -35,19 +35,19 @@ const StyledSection = styled.section`
     z-index: 1;
 `
 
-const FlexWrapperWithMediaQuery = styled(FlexWrapper)`
-    display: flex;
-    max-width: 1628px;
-    margin: 0 auto;
-    gap: 50px;
-    flex-direction: row;
-    @media (max-width: ${myTheme.screen.medium}) {
-        flex-wrap: wrap;
-        box-sizing: border-box;
-        padding: 20px;
-        max-width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-
-    }`
+// const FlexWrapperWithMediaQuery = styled(FlexWrapper)`
+//     display: flex;
+//     max-width: 1628px;
+//     margin: 0 auto;
+//     gap: 50px;
+//     flex-direction: row;
+//     @media (max-width: ${myTheme.screen.medium}) {
+//         flex-wrap: wrap;
+//         box-sizing: border-box;
+//         padding: 20px;
+//         max-width: 100%;
+//         flex-direction: column;
+//         align-items: center;
+//         gap: 30px;
+//
+//     }`
