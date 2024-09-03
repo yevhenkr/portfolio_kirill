@@ -26,7 +26,7 @@ export const myTheme = {
             medium: "768px",
             small: "576px",
     },
-    headerHeight: "20px"
+    headerHeight: "110px"
 }
 
 export const mySections = [

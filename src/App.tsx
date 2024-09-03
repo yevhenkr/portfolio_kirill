@@ -8,8 +8,8 @@ import {Main} from "./common/layout/main/main";
 export function App() {
     return (
         <AppStyle>
+            <Header/>
             <Main/>
-            {/*<Header/>*/}
             <Portfolio/>
         </AppStyle>
     )

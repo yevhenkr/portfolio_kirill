@@ -1,6 +1,5 @@
 import {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
-import logo from "../../../../assets/img/logo.png";
 import {FlexWrapper} from '../../ui/flefWrapper/FlexWrapper';
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
 import {myTheme} from "../../../../src/styles/Theme.styled";
@@ -24,9 +23,9 @@ export const Header = () => {
 
     return (
         <HeaderWrap ref={headerRef} $flex_direction={"row"} $display={"flex"}>
-            <Logo src={logo} alt={"Logo images"}/>
             <FlexWrapper $flex_direction={"row"} $display={"flex"}>
-                <HeaderMenu height={headerHeight}/>
+                {/*<HeaderMenu height={headerHeight}/>*/}
+                <NameSpan>Kirill Y.</NameSpan>
                 <Burger onClick={() => {
                     handleClick()
                 }}>
@@ -38,42 +37,36 @@ export const Header = () => {
 };
 
 const Burger = styled.a`
-    display: none;
-    position: relative;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+
     @media (max-width: ${myTheme.screen.medium}) {
         display: flex;
-        right: 10px;
     }
+`
+const NameSpan = styled.span`
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    color: white;
+    transform: translateY(-50%);
 `
 
 const HeaderWrap = styled(FlexWrapper)`
     position: fixed;
+    height:${myTheme.headerHeight};
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     width: 100%;
     background-color: ${myTheme.color.navy};
     z-index: 2;
-    @media (max-width: ${myTheme.screen.small}) {
-        max-width: ${myTheme.screen.small};
-        padding: 10px 0;
-    }
-`;
-
-const Logo = styled.img`
-    padding: 40px 0;
-    max-width: 100px;
-    max-height: 100px;
-    object-fit: contain;
-    @media (max-width: ${myTheme.screen.medium}) {
-        padding: 10px 0;
-        padding-left: 10px;
-    }
-    @media (max-width: ${myTheme.screen.small}) {
-        position: relative;
-        left: 10px;
-    }
 `;
 
