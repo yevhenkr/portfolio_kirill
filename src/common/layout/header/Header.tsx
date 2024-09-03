@@ -32,7 +32,6 @@ export const Header = () => {
                 }}>
                     <BurgerIcon color={`${myTheme.color.white}`}/>
                 </Burger>
-                <MobileMenu headerHeight={headerHeight} isMenu={squares} changeMenu={handleClick}/>
             </FlexWrapper>
         </HeaderWrap>
     );
