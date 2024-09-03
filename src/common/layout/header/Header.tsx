@@ -66,7 +66,7 @@ const HeaderWrap = styled(FlexWrapper)`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: ${myTheme.color.navy};
+    background-color: transparent;
     z-index: 2;
 `;
 
