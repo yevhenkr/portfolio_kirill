@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import {myTheme} from "./styles/Theme.styled.tsx";
-import {Portfolio} from "./common/layout/section/portfolio/Portfolio.tsx";
-import {Header} from "./common/layout/header/Header.tsx";
-import {Main} from "./common/layout/main/main.tsx";
+import {myTheme} from "./styles/Theme.styled";
+import {Portfolio} from "./common/layout/section/portfolio/Portfolio";
+import {Header} from "./common/layout/header/Header";
+import {Main} from "./common/layout/main/main";
 
 
 export function App() {

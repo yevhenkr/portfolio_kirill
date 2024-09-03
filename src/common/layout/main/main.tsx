@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { myTheme } from "../../../styles/Theme.styled.tsx";
+import { myTheme } from "../../../styles/Theme.styled";
 import photo from "../../../assets/img/photoUser.webp"; // Импортируйте изображение
 
 export const Main = () => {

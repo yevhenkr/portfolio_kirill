@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../ui/flefWrapper/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../ui/flefWrapper/FlexWrapper";
 import first from "../../../../assets/img/Port3.png";
 import second from "../../../../assets/img/Port3.png";
 import therd from "../../../../assets/img/Port3.png";
-import {myTheme} from "../../../../styles/Theme.styled.tsx";
-import {PortfolioCard} from "./PortfolioCard.tsx";
-import {VideoWrapper} from "../../../ui/VideoWrapper/VideoWrapper.tsx";
+import {myTheme} from "../../../../styles/Theme.styled";
+import {PortfolioCard} from "./PortfolioCard";
+import {VideoWrapper} from "../../../ui/VideoWrapper/VideoWrapper";
 
 export const Portfolio = () => {
     return (
