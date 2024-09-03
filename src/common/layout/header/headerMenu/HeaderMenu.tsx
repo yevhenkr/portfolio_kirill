@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import React from 'react';
-import {heightMenu, mySections, myTheme} from "../../../../../styles/Theme.styled";
+import { mySections, myTheme} from "../../../../../src/styles/Theme.styled";
 
 type PropsType = {
     className?: string;
@@ -12,10 +11,10 @@ export const HeaderMenu = (props: PropsType) => {
     const handleClick = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            const offset = props.height;
+            // const offset = props.height;
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
             window.scrollTo({
-                top: (elementPosition - heightMenu.large),
+                top: (elementPosition),
                 behavior: "smooth"
             });
         }
@@ -46,7 +45,7 @@ const Menu = styled.ul`
     right: 10px;
     padding: 0;
     margin-right: 50px;
-    color: ${myTheme.color.text};
+    color: ${myTheme.color.white};
 
     @media (max-width: ${myTheme.screen.medium}) {
         display: none;
@@ -70,7 +69,7 @@ const StyledLink = styled.a`
     text-decoration: none;
     text-align: center;
     position: relative;
-    color: ${myTheme.color.text};
+    color: ${myTheme.color.white};
 
     font-family: DMSans, sans-serif;
     font-size: 20px;

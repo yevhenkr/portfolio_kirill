@@ -1,12 +1,10 @@
-import React, {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 import logo from "../../../../assets/img/logo.png";
-import {FlexWrapper} from '../../ui/flexWrapper/FlexWrapper';
+import {FlexWrapper} from '../../ui/flefWrapper/FlexWrapper';
 import {HeaderMenu} from "./headerMenu/HeaderMenu";
-import SocialMediaIcons from "../footer/footerSocialMedia/socialMediaIcons";
-import {myTheme} from "../../../../styles/Theme.styled";
-import {BurgerIcon} from "../../../../assets/icons/burgerIcon";
-import {MobileMenu} from "../mobileMenu/MobileMenu";
+import {myTheme} from "../../../../src/styles/Theme.styled";
+import {BurgerIcon} from "../../../assets/icons/burgerIcon";
 
 
 export const Header = () => {
@@ -25,15 +23,14 @@ export const Header = () => {
     };
 
     return (
-        <HeaderWrap ref={headerRef} $flex_direction={"row"} display={"flex"}>
+        <HeaderWrap ref={headerRef} $flex_direction={"row"} $display={"flex"}>
             <Logo src={logo} alt={"Logo images"}/>
-            <FlexWrapper $flex_direction={"row"} display={"flex"}>
+            <FlexWrapper $flex_direction={"row"} $display={"flex"}>
                 <HeaderMenu height={headerHeight}/>
-                <SocialMediaIcons/>
                 <Burger onClick={() => {
                     handleClick()
                 }}>
-                    <BurgerIcon color={`${myTheme.color.title}`}/>
+                    <BurgerIcon color={`${myTheme.color.white}`}/>
                 </Burger>
                 <MobileMenu headerHeight={headerHeight} isMenu={squares} changeMenu={handleClick}/>
             </FlexWrapper>
@@ -58,7 +55,7 @@ const HeaderWrap = styled(FlexWrapper)`
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    background-color: ${myTheme.color.backGround};
+    background-color: ${myTheme.color.navy};
     z-index: 2;
     @media (max-width: ${myTheme.screen.small}) {
         max-width: ${myTheme.screen.small};
