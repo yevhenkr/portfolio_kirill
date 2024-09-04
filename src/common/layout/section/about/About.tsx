@@ -7,7 +7,7 @@ export function About() {
         <AboutWrapper>
             <TextContainer>
                 <TextWrap>
-                <BottomText>About</BottomText>
+                <TitleText>About</TitleText>
                 <TopText>who am i</TopText>
                 </TextWrap>
             </TextContainer>
@@ -45,10 +45,8 @@ const AboutDescription = styled.div`
     justify-content: space-between;
     width: 100%;
     max-width: 1320px;
-    padding-bottom: 90px;
     margin: 0 auto;
     padding-bottom: 120px;
-    
 `;
 
 const StyledP = styled.p`
@@ -82,7 +80,7 @@ const TextWrap = styled.div`
    position: relative;
 `;
 
-const BottomText = styled.h2`
+const TitleText = styled.h2`
     font-size: 120px;
     color: #fff;
     position: relative;
