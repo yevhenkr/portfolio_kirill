@@ -3,6 +3,7 @@ import {myTheme} from "./styles/Theme.styled";
 import {Portfolio} from "./common/layout/section/portfolio/Portfolio";
 import {Header} from "./common/layout/header/Header";
 import {Main} from "./common/layout/main/main";
+import {About} from "./common/layout/section/about/About.tsx";
 
 
 export function App() {
@@ -10,6 +11,7 @@ export function App() {
         <AppStyle>
             <Header/>
             <Main/>
+            <About/>
             <Portfolio/>
         </AppStyle>
     )

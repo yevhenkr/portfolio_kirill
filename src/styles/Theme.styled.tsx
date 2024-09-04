@@ -6,6 +6,7 @@ export const myTheme = {
         textColor: '#14279B',
         white: '#fff',
         smIcon: '#608AF5',
+        backGround: '#161616'
     },
 
     media: {
