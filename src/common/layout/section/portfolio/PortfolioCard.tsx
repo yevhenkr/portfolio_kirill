@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
-export function PortfolioCard() {
+type PropsType = {
+    link: string
+}
+
+export function PortfolioCard(props: PropsType) {
+
     return (
         <VideoWrapper>
             <StyledIframe
-                src="https://player.vimeo.com/video/1004127210"
+                src={props.link}
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
             />
@@ -24,4 +29,5 @@ const StyledIframe = styled.iframe`
     aspect-ratio: 16 / 9; /* Соотношение сторон 16:9 */
     overflow: hidden;
     border-radius: 8px;
+    border-color: transparent;
 `;
