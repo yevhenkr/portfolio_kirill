@@ -13,19 +13,15 @@ export function PortfolioCard() {
 }
 
 const VideoWrapper = styled.div`
-    position: relative;
-    max-width: 1250px;
     width: 100%;
-    padding-top: 40%;
-    margin: 0 auto;
-    height: 0;
+    max-width: 630px;
+    height: 100%;
+    border: none;
 `;
 
 const StyledIframe = styled.iframe`
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    border: none;
+    aspect-ratio: 16 / 9; /* Соотношение сторон 16:9 */
+    overflow: hidden;
+    border-radius: 8px;
 `;
