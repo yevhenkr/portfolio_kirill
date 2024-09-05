@@ -77,7 +77,7 @@ const TextContainer = styled.div`
 `;
 
 const TextWrap = styled.div`
-   position: relative;
+    position: relative;
 `;
 
 const TitleText = styled.h2`
