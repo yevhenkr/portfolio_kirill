@@ -25,7 +25,6 @@ export const Button = (props: ButtonType) => {
 const ButtonStyled = styled.button<{ background_color: string; color: string; padding?: string; margin?: string }>`
     background-color: ${props => props.background_color};
     color: ${props => props.color};
-    //width: ${props => props.width};
     text-transform: uppercase;
     font-family: Poppins, sans-serif;
     font-weight: 600;
