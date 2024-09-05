@@ -33,5 +33,5 @@ export const myTheme = {
 export const mySections = [
         ['#About','About'],
         ['#Portfolio', 'Portfolio'],
-        ['#footer', 'Contact'],
+        ['#Contact', 'Contact'],
     ]
