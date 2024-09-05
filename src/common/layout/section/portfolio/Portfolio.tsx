@@ -84,7 +84,7 @@ const BottomText = styled.h2`
 `;
 
 const StyledSection = styled.section`
-    padding-bottom: 170px;
+    padding-bottom: 70px;
     max-width: 100%;
     width: 100%;
     position: relative;
