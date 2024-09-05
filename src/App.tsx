@@ -15,7 +15,6 @@ export function App() {
             <About />
             <Portfolio/>
             <Contact />
-            <footer/>
         </AppStyle>
     )
 
