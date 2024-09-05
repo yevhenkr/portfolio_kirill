@@ -17,7 +17,7 @@ export const Portfolio = () => {
                 <PortfolioCard link={"https://player.vimeo.com/video/1004127210"}/>
                 <PortfolioCard link={"https://player.vimeo.com/video/1004127210"}/>
             </PortfolioWrap>
-            <Button title={"view all portfolio"} backGround={"rgba(21,132,241,0.87)"} color={"#000"}/>
+            <Button title={"view all portfolio"} color={"#000"} background_color={"#fff"} padding={"0"}/>
         </StyledSection>
     );
 };
@@ -25,7 +25,7 @@ const PortfolioWrap = styled.div`
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
-    padding-bottom: 120px;
+    padding-bottom: 140px;
     display: grid;
     column-gap: 34px;
     row-gap: 140px;
@@ -64,8 +64,8 @@ const BottomText = styled.h2`
     white-space: nowrap;
     font-weight: 400;
     font-size: 18px;
-    margin: 0; /* Убирает внешние отступы, которые могут влиять на выравнивание */
-    padding: 0; /* Убирает внутренние отступы, которые могут влиять на выравнивание */
+    margin: 0;
+    padding: 0;
     text-transform: uppercase;
     color: ${myTheme.color.white};
     background-color: #ECECEC2B;
