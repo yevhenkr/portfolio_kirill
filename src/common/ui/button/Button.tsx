@@ -4,7 +4,9 @@ type ButtonType = {
     title: string;
     color: string;
     background_color: string;
-    padding: string;
+    padding?: string;
+    width?:string;
+    margin?:string;
 }
 
 export const Button = (props: ButtonType) => {
@@ -13,15 +15,17 @@ export const Button = (props: ButtonType) => {
             background_color={props.background_color}
             color={props.color}
             padding={props.padding}
+            margin={props.margin}
         >
             {props.title || ""}
         </ButtonStyled>
     );
 };
 
-const ButtonStyled = styled.button<{ background_color: string; color: string; padding: string; }>`
+const ButtonStyled = styled.button<{ background_color: string; color: string; padding?: string; margin?: string }>`
     background-color: ${props => props.background_color};
     color: ${props => props.color};
+    //width: ${props => props.width};
     text-transform: uppercase;
     font-family: Poppins, sans-serif;
     font-weight: 600;
@@ -32,6 +36,7 @@ const ButtonStyled = styled.button<{ background_color: string; color: string; pa
     white-space: nowrap;
     border: none;
     cursor: pointer;
-    margin: 0 auto;
+    margin: ${props => props.margin || '0'} auto;
+    padding: ${props => props.padding || '0'};
 }
 `;
