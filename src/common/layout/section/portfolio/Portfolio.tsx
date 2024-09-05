@@ -91,7 +91,7 @@ const StyledSection = styled.section`
     background-color: white;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 60px;
     z-index: 1;
     background-color: ${myTheme.color.backGround};
 `
