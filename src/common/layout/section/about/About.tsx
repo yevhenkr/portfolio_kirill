@@ -4,7 +4,7 @@ import {Skill} from "../../../ui/skill/Skill.tsx";
 
 export function About() {
     return (
-        <AboutWrapper>
+        <AboutWrapper id={'About'}>
             <TextContainer>
                 <TextWrap>
                 <TitleText>About</TitleText>

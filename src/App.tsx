@@ -4,15 +4,18 @@ import {Portfolio} from "./common/layout/section/portfolio/Portfolio";
 import {Header} from "./common/layout/header/Header";
 import {Main} from "./common/layout/main/main";
 import {About} from "./common/layout/section/about/About.tsx";
+import {Contact} from "./common/layout/section/contact/Contact.tsx";
 
 
 export function App() {
     return (
         <AppStyle>
-            <Header/>
+            {/*<Header/>*/}
             <Main/>
-            <About/>
+            <About />
             <Portfolio/>
+            <Contact />
+            <footer/>
         </AppStyle>
     )
 
