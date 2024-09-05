@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {PortfolioCard} from "./PortfolioCard";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
+import {Button} from "../../../ui/button/Button.tsx";
 
 export const Portfolio = () => {
     return (
@@ -16,6 +17,7 @@ export const Portfolio = () => {
                 <PortfolioCard link={"https://player.vimeo.com/video/1004127210"}/>
                 <PortfolioCard link={"https://player.vimeo.com/video/1004127210"}/>
             </PortfolioWrap>
+            <Button title={"view all portfolio"} backGround={"rgba(21,132,241,0.87)"} color={"#000"}/>
         </StyledSection>
     );
 };
