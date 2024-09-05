@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {PortfolioCard} from "./PortfolioCard";
-import {myTheme} from "../../../../styles/Theme.styled.tsx";
-import {Button} from "../../../ui/button/Button.tsx";
+import {myTheme} from "../../../../styles/Theme.styled";
+import {Button} from "../../../ui/button/Button";
 
 export const Portfolio = () => {
     return (
