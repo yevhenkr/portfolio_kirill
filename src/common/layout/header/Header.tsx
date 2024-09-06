@@ -1,7 +1,6 @@
 import {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from '../../ui/flefWrapper/FlexWrapper';
-import {HeaderMenu} from "./headerMenu/HeaderMenu";
 import {myTheme} from "../../../../src/styles/Theme.styled";
 import {BurgerIcon} from "../../../assets/icons/burgerIcon.tsx";
 
