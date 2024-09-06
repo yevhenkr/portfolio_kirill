@@ -1,4 +1,3 @@
-import { Icon } from '../../../ui/icon/Icon'
 import styled from 'styled-components'
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
 import {FacebookIcon} from "../../../../assets/icons/facebookIcon.tsx";
