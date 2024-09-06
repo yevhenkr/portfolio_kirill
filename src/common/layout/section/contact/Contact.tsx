@@ -16,7 +16,7 @@ export function Contact() {
     };
     return (
         <SectionStyled id={'Contact'}>
-            <NameStyled>Kiril Y</NameStyled>
+            <NameStyled>Kiril Y.</NameStyled>
             <DivStyled>
                 <SubscribeStyled>
                     <PStyled>Subscribe to newsletter to get some updates related with branding, designs and
