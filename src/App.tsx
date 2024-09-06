@@ -5,6 +5,7 @@ import {Header} from "./common/layout/header/Header";
 import {Main} from "./common/layout/main/main";
 import {About} from "./common/layout/section/about/About";
 import {Contact} from "./common/layout/section/contact/Contact";
+import {Footer} from "./common/layout/footer/Footer.tsx";
 
 
 export function App() {
@@ -15,6 +16,7 @@ export function App() {
             <About />
             <Portfolio/>
             <Contact />
+            <Footer/>
         </AppStyle>
     )
 
