@@ -1,13 +1,17 @@
 import { Icon } from '../../../ui/icon/Icon'
 import styled from 'styled-components'
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
+import {FacebookIcon} from "../../../../assets/icons/facebookIcon.tsx";
+import {InstagramIcon} from "../../../../assets/icons/instagramIcon.tsx";
+import {LinkedinIcon} from "../../../../assets/icons/linkedinIcon.tsx";
+import {TelegramIcon} from "../../../../assets/icons/telegramIcon.tsx";
 
 const SocialMediaIcons = () => {
   return (
     <SocialList>
       <SocialItem>
         <SocialLink href={'https://www.facebook.com/share/CEyuLRthp5tg6zPc/'} rel={'noreferrer'}>
-          <Icon iconId={'facebook'} viewBox="0 0 31 31" color={`${myTheme.color.white}`}/>
+            <FacebookIcon fill={`${myTheme.color.grey}`}/>
         </SocialLink>
       </SocialItem>
 
@@ -16,19 +20,19 @@ const SocialMediaIcons = () => {
           href={'https://www.linkedin.com/in/kirill-yakubov-1792972a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'}
           rel={'noreferrer'}
         >
-          <Icon iconId={'linkedIn'}  color={`${myTheme.color.white}`}/>
+            <LinkedinIcon fill={`${myTheme.color.grey}`}/>
         </SocialLink>
       </SocialItem>
 
       <SocialItem>
         <SocialLink href={'https://t.me/Kiwi_Media'} rel={'noreferrer'}>
-          <Icon iconId={'telegram'} viewBox="0 0 31 31"  color={`${myTheme.color.white}`}/>{' '}
+            <TelegramIcon fill={`${myTheme.color.grey}`}/>
         </SocialLink>
       </SocialItem>
 
         <SocialItem>
         <SocialLink href={'https://www.instagram.com/kirill.yakubov?igsh=MTFxeno0MXFnM2t5Nw=='} rel={'noreferrer'}>
-          <Icon iconId={'telegram'} viewBox="0 0 31 31"  color={`${myTheme.color.white}`}/>{' '}
+            <InstagramIcon fill={`${myTheme.color.grey}`}/>
         </SocialLink>
       </SocialItem>
     </SocialList>
