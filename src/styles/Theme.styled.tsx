@@ -4,6 +4,7 @@ export const myTheme = {
         blue: '#4581F6',
         navy: '#002265',
         textColor: '#14279B',
+        grey: '#8C8C8C',
         white: '#fff',
         smIcon: '#608AF5',
         backGround: '#161616'
