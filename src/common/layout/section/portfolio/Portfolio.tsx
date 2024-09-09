@@ -28,7 +28,7 @@ const PortfolioWrap = styled.div`
     padding-bottom: 140px;
     display: grid;
     column-gap: 34px;
-    row-gap: 140px;
+    row-gap: 34px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 `;
