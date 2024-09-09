@@ -7,8 +7,8 @@ export function About() {
         <AboutWrapper id={'About'}>
             <TextContainer>
                 <TextWrap>
-                <TitleText>About</TitleText>
-                <TopText>who am i</TopText>
+                    <TitleText>About</TitleText>
+                    <TopText>who am i</TopText>
                 </TextWrap>
             </TextContainer>
             <AboutDescription>
@@ -68,7 +68,6 @@ const TextContainer = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
     width: fit-content;
     width: 100%;
@@ -82,10 +81,15 @@ const TextWrap = styled.div`
 
 const TitleText = styled.h2`
     font-size: 120px;
-    color: #fff;
+    color: #474b4f;
     position: relative;
     z-index: 1;
     text-align: center;
+    font-family: Jost;
+    font-size: 120px;
+    line-height: 180.03px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
 `;
 
 const TopText = styled.h2`
