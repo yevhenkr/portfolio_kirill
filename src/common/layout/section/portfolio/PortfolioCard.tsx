@@ -11,7 +11,6 @@ export function PortfolioCard(props: PropsType) {
             <StyledIframe
                 src={props.link}
                 allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
             />
         </VideoWrapper>
     );
