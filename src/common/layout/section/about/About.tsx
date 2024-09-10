@@ -2,8 +2,9 @@ import {useEffect, useRef} from 'react';
 import styled from "styled-components";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
 import {Skill} from "../../../ui/skill/Skill.tsx";
+
 type AboutType = {
-    setIsAboutAtTop: (boolean)=>void;
+    setIsAboutAtTop: (value: boolean) => void;
 };
 
 export function About(props: AboutType) {
@@ -15,8 +16,7 @@ export function About(props: AboutType) {
                 const rect = aboutRef.current.getBoundingClientRect();
                 if (rect.top <= 0) {
                     props.setIsAboutAtTop(rect.top <= 0);
-                }
-                else {
+                } else {
                     props.setIsAboutAtTop(false);
                 }
             }
