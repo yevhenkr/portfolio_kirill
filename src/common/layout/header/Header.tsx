@@ -1,34 +1,33 @@
-import {useRef, useState} from 'react';
+import { useRef, useState } from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from '../../ui/flefWrapper/FlexWrapper';
-import {myTheme} from "../../../styles/Theme.styled.tsx";
-import {BurgerIcon} from "../../../assets/icons/burgerIcon.tsx";
+import { FlexWrapper } from '../../ui/flefWrapper/FlexWrapper';
+import { myTheme } from "../../../styles/Theme.styled.tsx";
+import { BurgerIcon } from "../../../assets/icons/burgerIcon.tsx";
 
 type HeaderType = {
-    isaboutattop: boolean; // Исправляем на camelCase
+    isaboutattop: boolean;
 };
 
-export const Header = (props: HeaderType) => {
+export const Header = ({ isaboutattop }: HeaderType) => {
     const headerRef = useRef<HTMLDivElement>(null);
     const [squares, setSquares] = useState<boolean>(false);
     const handleClick = () => {
         setSquares(!squares);
     };
+
     return (
         <>
-            <HeaderWrap isaboutattop={props.isaboutattop.toString()} ref={headerRef} $flex_direction={"row"}
-                        $display={"flex"}>
+            <HeaderWrap $isAboutAtTop={isaboutattop} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
                 <FlexWrapper $flex_direction={"row"} $display={"flex"}>
                     <NameSpan>Kirill Y.</NameSpan>
                     <Burger onClick={handleClick}>
-                        <BurgerIcon color={`${myTheme.color.white}`}/>
+                        <BurgerIcon color={`${myTheme.color.white}`} />
                     </Burger>
                 </FlexWrapper>
             </HeaderWrap>
         </>
     );
 };
-
 
 const Burger = styled.a`
     display: flex;
@@ -41,7 +40,8 @@ const Burger = styled.a`
     @media (max-width: ${myTheme.screen.medium}) {
         display: flex;
     }
-`
+`;
+
 const NameSpan = styled.span`
     display: flex;
     align-items: center;
@@ -50,9 +50,9 @@ const NameSpan = styled.span`
     top: 50%;
     color: white;
     transform: translateY(-50%);
-`
+`;
 
-const HeaderWrap = styled(FlexWrapper)<{ isaboutattop: string }>`
+const HeaderWrap = styled(FlexWrapper)<{ $isAboutAtTop: boolean }>`
     position: fixed;
     height: ${myTheme.headerHeight};
     top: 0;
@@ -60,7 +60,7 @@ const HeaderWrap = styled(FlexWrapper)<{ isaboutattop: string }>`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: ${({isAboutAtTop}) => (isAboutAtTop === "true" ? 'rgba(0,0,0,0.5)' : "transparent")};
+    background-color: ${({ $isAboutAtTop }) => ($isAboutAtTop ? 'rgba(0,0,0,0.5)' : "transparent")};
     transition: background-color 0.6s ease-in-out;
     z-index: 2;
 `;
