@@ -18,7 +18,7 @@ export const Header = (props: HeaderType) => {
 
     return (
         <>
-            <HeaderWrap $isAboutAtTop={props.isAboutAtTop} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
+            <HeaderWrap isAboutAtTop={props.isAboutAtTop} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
                 <FlexWrapper $flex_direction={"row"} $display={"flex"}>
                     <NameSpan>Kirill Y.</NameSpan>
                     <Burger onClick={handleClick}>
@@ -52,7 +52,7 @@ const NameSpan = styled.span`
     transform: translateY(-50%);
 `
 
-const HeaderWrap = styled(FlexWrapper)`
+const HeaderWrap = styled(FlexWrapper)<{ isAboutAtTop: boolean }>`
     position: fixed;
     height: ${myTheme.headerHeight};
     top: 0;
@@ -60,7 +60,7 @@ const HeaderWrap = styled(FlexWrapper)`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: ${({$isAboutAtTop}) => ($isAboutAtTop ? 'rgba(0,0,0,0.5)' : "transparent")};
+    background-color: ${({isAboutAtTop}) => (isAboutAtTop ? 'rgba(0,0,0,0.5)' : "transparent")};
     transition: background-color 0.6s ease-in-out;
     z-index: 2;
 `;
