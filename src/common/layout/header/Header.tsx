@@ -1,19 +1,15 @@
-import {useEffect, useRef, useState} from 'react';
+import {useRef, useState} from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from '../../ui/flefWrapper/FlexWrapper';
-import {myTheme} from "../../../../src/styles/Theme.styled";
+import {myTheme} from "../../../styles/Theme.styled.tsx";
 import {BurgerIcon} from "../../../assets/icons/burgerIcon.tsx";
 
+type HeaderType = {
+    isAboutAtTop: boolean;
+};
 
-export const Header = () => {
+export const Header = (props: HeaderType) => {
     const headerRef = useRef<HTMLDivElement>(null);
-    const [headerHeight, setHeaderHeight] = useState<number>(0);
-    useEffect(() => {
-        if (headerRef.current) {
-            const height = headerRef.current.clientHeight;
-            setHeaderHeight(height);
-        }
-    }, []);
 
     const [squares, setSquares] = useState<boolean>(false);
     const handleClick = () => {
@@ -21,17 +17,16 @@ export const Header = () => {
     };
 
     return (
-        <HeaderWrap ref={headerRef} $flex_direction={"row"} $display={"flex"}>
-            <FlexWrapper $flex_direction={"row"} $display={"flex"}>
-                {/*<HeaderMenu height={headerHeight}/>*/}
-                <NameSpan>Kirill Y.</NameSpan>
-                <Burger onClick={() => {
-                    handleClick()
-                }}>
-                    <BurgerIcon color={`${myTheme.color.white}`}/>
-                </Burger>
-            </FlexWrapper>
-        </HeaderWrap>
+        <>
+            <HeaderWrap $isAboutAtTop={props.isAboutAtTop} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
+                <FlexWrapper $flex_direction={"row"} $display={"flex"}>
+                    <NameSpan>Kirill Y.</NameSpan>
+                    <Burger onClick={handleClick}>
+                        <BurgerIcon color={`${myTheme.color.white}`}/>
+                    </Burger>
+                </FlexWrapper>
+            </HeaderWrap>
+        </>
     );
 };
 
@@ -59,13 +54,13 @@ const NameSpan = styled.span`
 
 const HeaderWrap = styled(FlexWrapper)`
     position: fixed;
-    height:${myTheme.headerHeight};
+    height: ${myTheme.headerHeight};
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: transparent;
+    background-color: ${({$isAboutAtTop}) => ($isAboutAtTop ? 'rgba(0,0,0,0.5)' : "transparent")};
+    transition: background-color 0.6s ease-in-out;
     z-index: 2;
 `;
-

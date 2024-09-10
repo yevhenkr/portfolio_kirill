@@ -6,14 +6,17 @@ import {Main} from "./common/layout/main/main";
 import {About} from "./common/layout/section/about/About";
 import {Contact} from "./common/layout/section/contact/Contact";
 import {Footer} from "./common/layout/footer/Footer.tsx";
+import {useState} from "react";
 
 
 export function App() {
+    const [isAboutAtTop, setIsAboutAtTop] = useState(false);
+
     return (
         <AppStyle>
-            <Header/>
+            <Header isAboutAtTop={isAboutAtTop} />
             <Main/>
-            <About />
+            <About setIsAboutAtTop={setIsAboutAtTop} />
             <Portfolio/>
             <Contact />
             <Footer/>

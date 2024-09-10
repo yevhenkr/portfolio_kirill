@@ -1,10 +1,36 @@
+import {useEffect, useRef} from 'react';
 import styled from "styled-components";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
 import {Skill} from "../../../ui/skill/Skill.tsx";
+type AboutType = {
+    setIsAboutAtTop: (boolean)=>void;
+};
 
-export function About() {
+export function About(props: AboutType) {
+    const aboutRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (aboutRef.current) {
+                const rect = aboutRef.current.getBoundingClientRect();
+                if (rect.top <= 0) {
+                    props.setIsAboutAtTop(rect.top <= 0);
+                }
+                else {
+                    props.setIsAboutAtTop(false);
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll); // Добавляем слушатель прокрутки
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll); // Удаляем слушатель при размонтировании
+        };
+    }, []);
+
     return (
-        <AboutWrapper id={'About'}>
+        <AboutWrapper ref={aboutRef} id={'About'}>
             <TextContainer>
                 <TextWrap>
                     <TitleText>About</TitleText>
