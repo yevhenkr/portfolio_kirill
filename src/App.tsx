@@ -10,20 +10,20 @@ import {useState} from "react";
 
 
 export function App() {
-    const [isAboutAtTop, setIsAboutAtTop] = useState(false);
+    const [isabbutattop, setIsabbutattop] = useState(false);
 
     return (
         <AppStyle>
-            <Header isAboutAtTop={isAboutAtTop} />
-            <Main/>
-            <About setIsAboutAtTop={setIsAboutAtTop} />
-            <Portfolio/>
+            <Header isaboutattop={isabbutattop} /> {/* Исправляем на camelCase */}
+            <Main />
+            <About setIsAboutAtTop={setIsabbutattop} />
+            <Portfolio />
             <Contact />
-            <Footer/>
+            <Footer />
         </AppStyle>
-    )
-
+    );
 }
+
 
 const AppStyle = styled.div`
     display: flex;

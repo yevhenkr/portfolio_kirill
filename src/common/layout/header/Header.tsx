@@ -5,20 +5,19 @@ import {myTheme} from "../../../styles/Theme.styled.tsx";
 import {BurgerIcon} from "../../../assets/icons/burgerIcon.tsx";
 
 type HeaderType = {
-    isAboutAtTop: boolean;
+    isaboutattop: boolean; // Исправляем на camelCase
 };
 
 export const Header = (props: HeaderType) => {
     const headerRef = useRef<HTMLDivElement>(null);
-
     const [squares, setSquares] = useState<boolean>(false);
     const handleClick = () => {
         setSquares(!squares);
     };
-
     return (
         <>
-            <HeaderWrap isAboutAtTop={props.isAboutAtTop} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
+            <HeaderWrap isaboutattop={props.isaboutattop.toString()} ref={headerRef} $flex_direction={"row"}
+                        $display={"flex"}>
                 <FlexWrapper $flex_direction={"row"} $display={"flex"}>
                     <NameSpan>Kirill Y.</NameSpan>
                     <Burger onClick={handleClick}>
@@ -29,6 +28,7 @@ export const Header = (props: HeaderType) => {
         </>
     );
 };
+
 
 const Burger = styled.a`
     display: flex;
@@ -52,7 +52,7 @@ const NameSpan = styled.span`
     transform: translateY(-50%);
 `
 
-const HeaderWrap = styled(FlexWrapper)<{ isAboutAtTop: boolean }>`
+const HeaderWrap = styled(FlexWrapper)<{ isaboutattop: string }>`
     position: fixed;
     height: ${myTheme.headerHeight};
     top: 0;
@@ -60,7 +60,7 @@ const HeaderWrap = styled(FlexWrapper)<{ isAboutAtTop: boolean }>`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: ${({isAboutAtTop}) => (isAboutAtTop ? 'rgba(0,0,0,0.5)' : "transparent")};
+    background-color: ${({isAboutAtTop}) => (isAboutAtTop === "true" ? 'rgba(0,0,0,0.5)' : "transparent")};
     transition: background-color 0.6s ease-in-out;
     z-index: 2;
 `;
