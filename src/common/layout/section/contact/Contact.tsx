@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
+import SocialMediaIcons from "../../footer/footerSocialMedia/SocialMediaIcons.tsx";
 
 export function Contact() {
     const handleClick = (id: string) => {
@@ -20,6 +21,7 @@ export function Contact() {
                     <PStyled>Just feel free to contact if you wanna collaborate with me, or simply have a
                         conversation.</PStyled>
                     <Mail>kirill.yakubov@gmail.com</Mail>
+                    <SocialMediaIcons/>
                 </SubscribeStyled>
                 <UlStyled>
                     <LinkStyled><AStyled onClick={() => handleClick("Home")}>Home </AStyled></LinkStyled>

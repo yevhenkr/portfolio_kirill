@@ -41,12 +41,11 @@ const SocialMediaIcons = () => {
 export default SocialMediaIcons
 
 const SocialList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  justify-content: end;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
     align-items: center;
-  padding-left: 0;
+    padding-left: 0;
     @media (max-width: ${myTheme.screen.medium}) {
         display: none;
     }
