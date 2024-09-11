@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import {Button} from "../../../ui/button/Button.tsx";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
 
 export function Contact() {
     const handleClick = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            // const offset = props.height; // Указать необходимое смещение
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
             window.scrollTo({
                 top: (elementPosition),
@@ -19,25 +17,23 @@ export function Contact() {
             <NameStyled>Kirill Y.</NameStyled>
             <DivStyled>
                 <SubscribeStyled>
-                    <PStyled>Subscribe to newsletter to get some updates related with branding, designs and
-                        more.</PStyled>
-                    <InputStyled placeholder={"write your email address"}/>
-                    <Button margin={"inherit"} title={"subscribe it"} background_color={"#fff"} color={"#000"}
-                            padding={"11px 0"}/>
+                    <PStyled>Just feel free to contact if you wanna collaborate with me, or simply have a
+                        conversation.</PStyled>
+                    <Mail>kirill.yakubov@gmail.com</Mail>
                 </SubscribeStyled>
-                <ul>
+                <UlStyled>
                     <LinkStyled><AStyled onClick={() => handleClick("Home")}>Home </AStyled></LinkStyled>
                     <LinkStyled><AStyled onClick={() => handleClick("About")}>About </AStyled></LinkStyled>
                     <LinkStyled><AStyled onClick={() => handleClick("Portfolio")}>Portfolio </AStyled></LinkStyled>
-                </ul>
-                <RightPart>
-                    <ContactText>Just feel free to contact if you wanna collaborate with me, or simply have a conversation.</ContactText>
-                    <Mail>kirill.yakubov@gmail.com</Mail>
-                </RightPart>
+                    <LinkStyled><AStyled
+                        onClick={() => handleClick("Testimonials")}>Testimonials </AStyled></LinkStyled>
+                    <LinkStyled><AStyled onClick={() => handleClick("Contact")}>Contact </AStyled></LinkStyled>
+                </UlStyled>
             </DivStyled>
         </SectionStyled>
     );
 }
+
 const Mail = styled.span`
     position: relative;
     display: inline-block;
@@ -46,45 +42,41 @@ const Mail = styled.span`
     &::after {
         content: '';
         position: absolute;
+
         left: 0;
         right: 0;
         bottom: 0;
-        height: 2px; /* Толщина линии */
-        background-color: white; /* Цвет линии */
+        height: 2px;
+        background-color: white;
     }
 `
-const ContactText = styled.p`
-    font-size: 17px;
-    padding-bottom: 32px;
-    line-height: 225%;
+const UlStyled = styled.ul`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    max-height: 150px; /* Ограничение по высоте */
+    row-gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
+`
 
-`
-const RightPart = styled.div`
-    max-width: 410px;
-    width: 100%;
-`
 const LinkStyled = styled.li`
+    line-height: 1.2;
+
     :hover {
         color: grey;
     }`
 const AStyled = styled.a`
     font-size: 17px;
-    line-height: 150%; /* Более стандартное значение */
-`;
-const InputStyled = styled.input`
-    width: 100%; /* Задает ширину 100% от родителя */
-    font-size: 17px;
-    font-weight: 400;
-    margin-bottom: 10px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 22px;
-    box-sizing: border-box; /* Включает padding и border в общую ширину */
+    line-height: 150%;
+    text-transform: uppercase;
 `;
 
 const SubscribeStyled = styled.div`
     display: flex;
-    max-width: 300px;
+    max-width: 400px;
     flex-direction: column;
     margin-bottom: 100px;
 `;
@@ -99,6 +91,7 @@ const DivStyled = styled.div`
 
 const SectionStyled = styled.section`
     padding-top: 160px;
+    ma
     color: white;
     max-width: 100%;
     width: 100%;
