@@ -6,10 +6,12 @@ import styled from "styled-components";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
 import {Navigation} from "swiper/modules";
 import {Testimonial} from "./Testimonial.tsx";
+import {Title} from "../../../ui/title/Title.tsx";
 
 export function Testimonials() {
     return (
         <StyledSection>
+            <Title title={"Testimonials"} smallText={"what clients says"}/>
             <Swiper
                 navigation={true}
                 modules={[Navigation]}  // Подключаем модуль Navigation
@@ -18,11 +20,14 @@ export function Testimonials() {
             >
                 <SwiperSlide>
                     <StyledDiv>
-                       <Testimonial name={"Lucas wolfer"} text={"“Lorem ipsum dolor sit amet, elit consectetur adipiscing. Odio tincidunt et, massa, turpis nec dolor posuere tempus. Nulla congue et dolor sit amet, elit consectetur adipiscing.”"} position={"ceo - raisins"} imgSrc={"../../../../../src/assets/img/UserTetstimonials.png"}/>
-                    </StyledDiv></SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
+                       <Testimonial name={"Lucas wolfer"} text={"“Этот дизайнер сочетает в себе креативность и техническое мастерство, создавая визуально захватывающие и функциональные решения. Его работы отражают глубокое понимание тенденций и потребностей клиентов, привнося изысканный стиль в каждый проект.”"} position={"ceo - raisins"} imgSrc={"../../../../../src/assets/img/UserTetstimonials.png"}/>
+                    </StyledDiv>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <StyledDiv>
+                        <Testimonial name={"Lucas wolfer"} text={"“Этот дизайнер сочетает в себе креативность и техническое мастерство, создавая визуально захватывающие и функциональные решения. Его работы отражают глубокое понимание тенденций и потребностей клиентов, привнося изысканный стиль в каждый проект.”"} position={"ceo - raisins"} imgSrc={"../../../../../src/assets/img/UserTetstimonials.png"}/>
+                    </StyledDiv>
+                </SwiperSlide>
             </Swiper>
         </StyledSection>
     );
