@@ -11,7 +11,7 @@ import {Title} from "../../../ui/title/Title.tsx";
 export function Testimonials() {
     return (
         <StyledSection id={'Testimonials'}>
-            <Title title={"Testimonials"} smallText={"what clients says"} paddingTop={"230px"} paddingBottom={"230px"}/>
+            <Title title={"Testimonials"} smallText={"what clients says"} />
             <Swiper
                 navigation={true}
                 modules={[Navigation]}  // Подключаем модуль Navigation
