@@ -91,7 +91,6 @@ const DivStyled = styled.div`
 
 const SectionStyled = styled.section`
     padding-top: 160px;
-    ma
     color: white;
     max-width: 100%;
     width: 100%;
