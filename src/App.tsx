@@ -7,6 +7,7 @@ import {About} from "./common/layout/section/about/About";
 import {Contact} from "./common/layout/section/contact/Contact";
 import {Footer} from "./common/layout/footer/Footer.tsx";
 import {useState} from "react";
+import {Testimonials} from "./common/layout/section/testimonials/Testimonials.tsx";
 
 
 export function App() {
@@ -18,6 +19,7 @@ export function App() {
             <Main />
             <About setIsAboutAtTop={setIsabbutattop} />
             <Portfolio />
+            <Testimonials/>
             <Contact />
             <Footer />
         </AppStyle>

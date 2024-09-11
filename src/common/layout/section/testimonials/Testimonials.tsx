@@ -11,7 +11,7 @@ import {Title} from "../../../ui/title/Title.tsx";
 export function Testimonials() {
     return (
         <StyledSection>
-            <Title title={"Testimonials"} smallText={"what clients says"}/>
+            <Title title={"Testimonials"} smallText={"what clients says"} paddingTop={"230px"} paddingBottom={"230px"}/>
             <Swiper
                 navigation={true}
                 modules={[Navigation]}  // Подключаем модуль Navigation
@@ -20,12 +20,26 @@ export function Testimonials() {
             >
                 <SwiperSlide>
                     <StyledDiv>
-                       <Testimonial name={"Lucas wolfer"} text={"“Этот дизайнер сочетает в себе креативность и техническое мастерство, создавая визуально захватывающие и функциональные решения. Его работы отражают глубокое понимание тенденций и потребностей клиентов, привнося изысканный стиль в каждый проект.”"} position={"ceo - raisins"} imgSrc={"../../../../../src/assets/img/UserTetstimonials.png"}/>
+                        <Testimonial name={"Lucas wolfer"}
+                                     text={"“Этот дизайнер сочетает в себе креативность и техническое мастерство, создавая визуально захватывающие и функциональные решения. Его работы отражают глубокое понимание тенденций и потребностей клиентов, привнося изысканный стиль в каждый проект.”"}
+                                     position={"ceo - raisins"}
+                                     imgSrc={"../../../../../src/assets/img/UserTetstimonials.png"}/>
                     </StyledDiv>
                 </SwiperSlide>
                 <SwiperSlide>
                     <StyledDiv>
-                        <Testimonial name={"Lucas wolfer"} text={"“Этот дизайнер сочетает в себе креативность и техническое мастерство, создавая визуально захватывающие и функциональные решения. Его работы отражают глубокое понимание тенденций и потребностей клиентов, привнося изысканный стиль в каждый проект.”"} position={"ceo - raisins"} imgSrc={"../../../../../src/assets/img/UserTetstimonials.png"}/>
+                        <Testimonial name={"Lucas wolfer"}
+                                     text={"“Этот дизайнер сочетает в себе креативность и техническое мастерство, создавая визуально захватывающие и функциональные решения. Его работы отражают глубокое понимание тенденций и потребностей клиентов, привнося изысканный стиль в каждый проект.”"}
+                                     position={"ceo - raisins"}
+                                     imgSrc={"../../../../../src/assets/img/UserTetstimonials.png"}/>
+                    </StyledDiv>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <StyledDiv>
+                        <Testimonial name={"Lucas wolfer"}
+                                     text={"“Этот дизайнер сочетает в себе креативность и техническое мастерство, создавая визуально захватывающие и функциональные решения. Его работы отражают глубокое понимание тенденций и потребностей клиентов, привнося изысканный стиль в каждый проект.”"}
+                                     position={"ceo - raisins"}
+                                     imgSrc={"../../../../../src/assets/img/UserTetstimonials.png"}/>
                     </StyledDiv>
                 </SwiperSlide>
             </Swiper>
@@ -45,10 +59,15 @@ const StyledSection = styled.section`
     flex-direction: column;
     gap: 60px;
     z-index: 1;
-    background-color: ${myTheme.color.navy};
+    background-color: ${myTheme.color.backGround};
+    background-image: url("../../../../../src/assets/img/Testimonions.png"); /* Путь к вашему фоновому изображению */
+    background-size: cover; /* Обрезает изображение, чтобы оно полностью заполнило фон */
+    background-position: center; /* Центрирует изображение по центру фона */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
     @media (max-width: ${myTheme.screen.medium}) {
         height: 200px;
     }
+
     .swiper-button-next, .swiper-button-prev {
         color: ${myTheme.color.white}; // Замените на желаемый цвет стрелок
     }
