@@ -10,7 +10,7 @@ import {Title} from "../../../ui/title/Title.tsx";
 
 export function Testimonials() {
     return (
-        <StyledSection>
+        <StyledSection id={'Testimonials'}>
             <Title title={"Testimonials"} smallText={"what clients says"} paddingTop={"230px"} paddingBottom={"230px"}/>
             <Swiper
                 navigation={true}
