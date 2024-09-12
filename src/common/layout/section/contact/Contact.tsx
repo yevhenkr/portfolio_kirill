@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
-import SocialMediaIcons from "../../footer/footerSocialMedia/SocialMediaIcons.tsx";
 import {TelegramIcon} from "../../../../assets/icons/telegramIcon.tsx";
 import {WhatsappIcon} from "../../../../assets/icons/whatsappIcon.tsx";
 
@@ -62,7 +61,7 @@ margin-bottom: 40px;
         right: 0;
         bottom: 0;
         height: 2px;
-        background-color: white;
+        background-color:  ${myTheme.color.white};
     }
 `
 const UlStyled = styled.ul`
@@ -81,7 +80,7 @@ const LinkStyled = styled.li`
     line-height: 1.2;
 
     :hover {
-        color: grey;
+        color:  ${myTheme.color.grey};
     }`
 const AStyled = styled.a`
     font-size: 17px;
@@ -106,7 +105,7 @@ const DivStyled = styled.div`
 
 const SectionStyled = styled.section`
     padding-top: 160px;
-    color: white;
+    color:  ${myTheme.color.white};
     max-width: 100%;
     width: 100%;
     position: relative;

@@ -21,7 +21,7 @@ const FooterWrapper = styled.div`
     padding-right: 200px;`
 
 const FooterStyle = styled.footer`
-    background-color: #212121;
+    background-color:  ${myTheme.color.backGroundFooter};
     width: 100%;
     
 `

@@ -78,7 +78,7 @@ const StyledSpan = styled.span`
     text-align: left;
     text-transform: uppercase;
     color: ${myTheme.color.white};
-    background-color: #ECECEC2B;
+    background-color: ${myTheme.color.textBackground};
     display: inline;
     font-family: Inconsolata;
     line-height: 30px;

@@ -60,7 +60,7 @@ const AboutWrapper = styled.section`
     display: flex;
     flex-direction: column;
     width: 100%;
-    color: white;
+    color:  ${myTheme.color.white};
     background-color: ${myTheme.color.backGround};
     padding-top: 90px;
 `;
@@ -107,7 +107,7 @@ const TextWrap = styled.div`
 
 const TitleText = styled.h2`
     font-size: 120px;
-    color: #474b4f;
+    color:  ${myTheme.color.titleText};
     position: relative;
     z-index: 1;
     text-align: center;
@@ -122,7 +122,7 @@ const TopText = styled.h2`
     font-family: Inconsolata;
     text-transform: uppercase;
     font-size: 16px;
-    color: #ff0000;
+    color:  ${myTheme.color.white};
     position: absolute;
     top: 50%;
     left: 50%;

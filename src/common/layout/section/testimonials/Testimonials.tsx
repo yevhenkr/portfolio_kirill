@@ -54,7 +54,7 @@ const StyledSection = styled.section`
     width: 100%;
     //height: 300px; // Задаем фиксированную высоту для контейнера
     position: relative;
-    background-color: white;
+    background-color:  ${myTheme.color.white};
     display: flex;
     flex-direction: column;
     gap: 60px;

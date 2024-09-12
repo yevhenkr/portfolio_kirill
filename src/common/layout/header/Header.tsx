@@ -48,7 +48,7 @@ const NameSpan = styled.span`
     position: absolute;
     left: 100px;
     top: 50%;
-    color: white;
+    color: ${myTheme.color.white};
     transform: translateY(-50%);
 `;
 
@@ -60,7 +60,7 @@ const HeaderWrap = styled(FlexWrapper)<{ $isAboutAtTop: boolean }>`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: ${({ $isAboutAtTop }) => ($isAboutAtTop ? 'rgba(0,0,0,0.5)' : "transparent")};
+    background-color: ${({ $isAboutAtTop }) => ($isAboutAtTop ? `${myTheme.color.header}` : `${myTheme.color.transparent}`)};
     transition: background-color 0.6s ease-in-out;
     z-index: 2;
 `;

@@ -1,13 +1,15 @@
 export const myTheme = {
     color: {
         black: '#000000',
-        blue: '#4581F6',
         navy: '#002265',
-        textColor: '#14279B',
         grey: '#8C8C8C',
         white: '#fff',
-        smIcon: '#608AF5',
-        backGround: '#161616'
+        backGround: '#161616',
+        backGroundFooter: '#212121',
+        textBackground: '#ECECEC2B',
+        titleText: '#474b4f',
+        transparent: 'transparent',
+        header: 'rgba(0,0,0,0.5)'
     },
 
     media: {

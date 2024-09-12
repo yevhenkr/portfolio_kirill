@@ -39,7 +39,7 @@ const TextWrap = styled.div`
 
 const TitleText = styled.h2`
     font-size: 120px;
-    color: #474b4f;
+    color:  ${myTheme.color.titleText};
     position: relative;
     z-index: 1;
     text-align: center;
@@ -51,7 +51,7 @@ const TitleText = styled.h2`
 `;
 
 const BottomText = styled.h2`
-    color: #ff0000;
+    color: ${myTheme.color.white};
     position: absolute;
     top: 50%;
     left: 50%;
@@ -68,7 +68,7 @@ const BottomText = styled.h2`
     padding: 0;
     text-transform: uppercase;
     color: ${myTheme.color.white};
-    background-color: #ECECEC2B;
+    background-color:${myTheme.color.textBackground};
     display: inline;
     font-family: Inconsolata;
     line-height: 30px;
@@ -88,7 +88,7 @@ const StyledSection = styled.section`
     max-width: 100%;
     width: 100%;
     position: relative;
-    background-color: white;
+    background-color: ${myTheme.color.white};
     display: flex;
     flex-direction: column;
     gap: 60px;
