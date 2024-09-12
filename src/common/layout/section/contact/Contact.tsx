@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
 import SocialMediaIcons from "../../footer/footerSocialMedia/SocialMediaIcons.tsx";
+import {TelegramIcon} from "../../../../assets/icons/telegramIcon.tsx";
+import {WhatsappIcon} from "../../../../assets/icons/whatsappIcon.tsx";
 
 export function Contact() {
     const handleClick = (id: string) => {
@@ -21,7 +23,18 @@ export function Contact() {
                     <PStyled>Just feel free to contact if you wanna collaborate with me, or simply have a
                         conversation.</PStyled>
                     <Mail>kirill.yakubov@gmail.com</Mail>
-                    <SocialMediaIcons/>
+                    <LinkWrapper>
+                        <SocialItem>
+                            <SocialLink href={'https://t.me/Kiwi_Media'} rel={'noreferrer'}>
+                                <WhatsappIcon fill={`${myTheme.color.grey}`}/>
+                            </SocialLink>
+                        </SocialItem>
+                        <SocialItem>
+                          <SocialLink href={'https://t.me/Kiwi_Media'} rel={'noreferrer'}>
+                              <TelegramIcon fill={`${myTheme.color.grey}`}/>
+                          </SocialLink>
+                        </SocialItem>
+                    </LinkWrapper>
                 </SubscribeStyled>
                 <UlStyled>
                     <LinkStyled><AStyled onClick={() => handleClick("Home")}>Home </AStyled></LinkStyled>
@@ -40,7 +53,7 @@ const Mail = styled.span`
     position: relative;
     display: inline-block;
     padding-bottom: 6px; /* Отступ от текста до линии */
-
+margin-bottom: 40px;
     &::after {
         content: '';
         position: absolute;
@@ -114,3 +127,20 @@ const NameStyled = styled.p`
     font-size: 36px;
     margin-left: 280px;
 `;
+
+const LinkWrapper = styled.ul`
+    display: flex;
+    flex-direction: row;
+    column-gap: 18px;
+`
+const SocialItem = styled.li`
+    display: flex;
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: center; /* Центрирует содержимое по вертикали */
+`
+const SocialLink = styled.a`
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+`
