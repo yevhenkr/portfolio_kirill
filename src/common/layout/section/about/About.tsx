@@ -132,4 +132,5 @@ const TopText = styled.h2`
     text-align: center;
     width: 104px;
     height: 22px;
+    white-space: nowrap;
 `;
