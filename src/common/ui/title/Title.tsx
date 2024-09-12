@@ -17,6 +17,8 @@ export function Title(props: PropsType) {
 
 const TextWrap = styled.div`
     position: relative;
+    width: 100%; /* Убедитесь, что родитель занимает всю доступную ширину */
+    text-align: center; 
 `;
 
 const TitleText = styled.h2`
@@ -33,6 +35,10 @@ const TitleText = styled.h2`
 `;
 const BottomText = styled.h3`
     font-family: Inconsolata;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: ${myTheme.color.white};
+    background-color: ${myTheme.color.black};;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -40,26 +46,6 @@ const BottomText = styled.h3`
     z-index: 2;
     opacity: 0.7;
     text-align: center;
-    width: 104px;
-    height: 22px;
     white-space: nowrap;
-    font-weight: 400;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    color: ${myTheme.color.white};
-    background-color: #ECECEC2B;
-    display: inline;
-    line-height: 30px;
-    letter-spacing: 0.24em;
-
-    &:before,
-    &:after {
-        content: '';
-        display: inline-block;
-        width: 0;
-        height: 0;
-    }
 `;
 
