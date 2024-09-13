@@ -1,10 +1,20 @@
+@font-face {
+    font-family: Jost;
+    font-weight: 400;
+    font-style: normal;
+    src: local("Jost");
+    src: url("./assets/fonts/jost/Jost-Regular.woff2") format("woff2"),
+    url("./assets/fonts/jost/Jost-Regular.ttf") format("truetype");
+}
+
 body {
+    min-width: 365px;
     margin: 0;
+
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    min-width: 365px;
 ;
 }
 
@@ -28,18 +38,20 @@ p {
     margin: 0;
     padding: 0;
 
-    @media (max-width: 576px) {
+    @media (width <= 576px) {
         font-size: 14px;
     }
 }
 
 a, button {
+    cursor: pointer;
+
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     font-style: inherit;
     color: inherit;
     text-decoration: none;
+
     border: none;
-    cursor: pointer;
 }
