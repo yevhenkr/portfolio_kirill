@@ -31,6 +31,21 @@ export function About(props: AboutType) {
 
     return (
         <AboutWrapper ref={aboutRef} id={'About'}>
+            <CommercialWrap>
+                <CommercialWrap>
+                    <CommercialCount>4</CommercialCount>
+                    <CommercialLeftTextWrap>
+                        <p>years</p>
+                        <p>of commercial</p>
+                        <p>experience</p>
+                    </CommercialLeftTextWrap>
+                </CommercialWrap>
+                <CommercialWrap>
+                    <CommercialCount>600+</CommercialCount>
+                    <CommercialRightText>successful sales</CommercialRightText>
+                </CommercialWrap>
+                <div></div>
+            </CommercialWrap>
             <TextContainer>
                 <TextWrap>
                     <TitleText>About</TitleText>
@@ -56,11 +71,31 @@ export function About(props: AboutType) {
     )
 }
 
+const CommercialWrap = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: row;
+`
+const CommercialLeftTextWrap = styled.div`
+    position: relative;
+    left: -30px;
+    top: 38%;
+`
+const CommercialRightText = styled.span`
+    position: absolute;
+    left: -30px;
+    top: 38%;
+`
+const CommercialCount = styled.span`
+    font-size: 230px;
+    color: ${myTheme.color.grey};
+`
+
 const AboutWrapper = styled.section`
     display: flex;
     flex-direction: column;
     width: 100%;
-    color:  ${myTheme.color.white};
+    color: ${myTheme.color.white};
     background-color: ${myTheme.color.backGround};
     padding-top: 90px;
 `;
@@ -107,7 +142,7 @@ const TextWrap = styled.div`
 
 const TitleText = styled.h2`
     font-size: 120px;
-    color:  ${myTheme.color.titleText};
+    color: ${myTheme.color.titleText};
     position: relative;
     z-index: 1;
     text-align: center;
@@ -122,7 +157,7 @@ const TopText = styled.h2`
     font-family: Inconsolata;
     text-transform: uppercase;
     font-size: 16px;
-    color:  ${myTheme.color.white};
+    color: ${myTheme.color.white};
     position: absolute;
     top: 50%;
     left: 50%;
