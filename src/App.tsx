@@ -6,16 +6,40 @@ import {Main} from "./common/layout/main/main";
 import {About} from "./common/layout/section/about/About";
 import {Contact} from "./common/layout/section/contact/Contact";
 import {Footer} from "./common/layout/footer/Footer.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Testimonials} from "./common/layout/section/testimonials/Testimonials.tsx";
 
 
 export function App() {
     const [isabbutattop, setIsabbutattop] = useState(false);
+    const [isModalOpen, setModalOpen] = useState(false);
+    useEffect(() => {
+        const body = document.body;
+        const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+        if (isModalOpen) {
+            // Запрещаем скроллинг на основном содержимом
+            body.style.position = 'fixed';
+            body.style.top = `-${window.scrollY}px`;
+            body.style.left = '0';
+            body.style.width = '100%';
+            body.style.overflow = 'hidden';
+            body.style.paddingRight = `${scrollBarWidth}px`;
+        } else {
+            // Разрешаем скроллинг и сбрасываем стили
+            body.style.position = '';
+            body.style.top = '';
+            body.style.left = '';
+            body.style.width = '';
+            body.style.overflow = '';
+            body.style.paddingRight = '';
+            window.scrollTo(0, parseInt(body.style.top || '0', 10) * -1);
+        }
+    }, [isModalOpen]);
 
     return (
         <AppStyle>
-            <Header isaboutattop={isabbutattop} /> {/* Исправляем на camelCase */}
+            <Header isAboutTop={isabbutattop} setHeadMenuOpen={setModalOpen}/> {/* Исправляем на camelCase */}
             <Main />
             <About setIsAboutAtTop={setIsabbutattop} />
             <Portfolio />

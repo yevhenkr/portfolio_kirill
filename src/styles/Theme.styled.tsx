@@ -33,7 +33,7 @@ export const myTheme = {
     },
     headerHeight: "110px",
 
-    rightBurger: {
+    burgerPosition: {
         close: "100px",
         open: "117px"
     }
