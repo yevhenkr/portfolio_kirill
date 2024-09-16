@@ -87,6 +87,7 @@ const CommercialRightText = styled.span`
     top: 38%;
 `
 const CommercialCount = styled.span`
+    font-family: Jost,serif;
     font-size: 230px;
     color: ${myTheme.color.grey};
 `
@@ -130,7 +131,6 @@ const TextContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: fit-content;
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
@@ -146,15 +146,14 @@ const TitleText = styled.h2`
     position: relative;
     z-index: 1;
     text-align: center;
-    font-family: Jost;
-    font-size: 120px;
+    font-family: Jost,serif;
     line-height: 180.03px;
     letter-spacing: -0.04em;
     text-transform: uppercase;
 `;
 
 const TopText = styled.h2`
-    font-family: Inconsolata;
+    font-family: Inconsolata, serif;
     text-transform: uppercase;
     font-size: 16px;
     color: ${myTheme.color.white};
