@@ -82,18 +82,22 @@ const CommercialWrap = styled.div`
 `
 const CommercialLeftTextWrap = styled.div`
     position: relative;
+    color: ${myTheme.color.yellow};
     left: -30px;
     top: 50%;
 `
 const CommercialRightText = styled.span`
+    font-family: Inconsolata, serif;
+    text-transform: uppercase;
     position: absolute;
     left: 100px;
     top: 50%;
+    color: ${myTheme.color.yellow};
 `
 const CommercialCount = styled.span`
     font-family: Jost, serif;
     font-size: 230px;
-    color: ${myTheme.color.grey};
+    color: ${myTheme.color.greyBigNumber};
 `
 
 const AboutWrapper = styled.section`

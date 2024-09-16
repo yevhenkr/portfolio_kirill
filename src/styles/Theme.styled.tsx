@@ -2,6 +2,8 @@ export const myTheme = {
     color: {
         black: '#000000',
         grey: '#8C8C8C',
+        greyBigNumber: '#545454',
+        yellow: '#ffcf45',
         white: '#fff',
         backGround: '#161616',
         backGroundFooter: '#212121',
