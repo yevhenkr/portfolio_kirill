@@ -26,17 +26,24 @@ export const myTheme = {
         }
     },
     screen: {
-            extraLarge: "1200px",
-            large: "992px",
-            medium: "768px",
-            small: "576px",
+        extraLarge: "1200px",
+        large: "992px",
+        medium: "768px",
+        small: "576px",
     },
-    headerHeight: "110px"
+    headerHeight: "110px",
+
+    rightBurger: {
+        close: "100px",
+        open: "117px"
+    }
 }
 
+
 export const mySections = [
-        ['#About','About'],
-        ['#Portfolio', 'Portfolio'],
-        ['#Testimonials', 'Testimonials'],
-        ['#Contact', 'Contact'],
-    ]
+    ['#About', 'About'],
+    ['#Portfolio', 'Portfolio'],
+    ['#Achievement', 'Achievement'],
+    ['#Testimonials', 'Testimonials'],
+    ['#Contact', 'Contact'],
+]

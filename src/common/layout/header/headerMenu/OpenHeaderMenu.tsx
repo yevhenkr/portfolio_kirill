@@ -3,7 +3,7 @@ import {mySections, myTheme} from "../../../../styles/Theme.styled.tsx";
 // import {heightMenu, mySections, myTheme} from "../../../../../styles/Theme.styled";
 
 type PropsType = {
-    headerMenu: boolean;
+    headermenu: boolean;
 };
 
 export const OpenHeaderMenu = (props: PropsType) => {
@@ -23,7 +23,7 @@ export const OpenHeaderMenu = (props: PropsType) => {
     };
 
     return (
-        <Menu headerMenu={props.headerMenu}>
+        <Menu $headermenu={props.headermenu}>
             {mySections.map((section, index) => (
                 <StyledLi key={index} onClick={() => handleClick(section[1])}>
                     <StyledLink>
@@ -35,13 +35,13 @@ export const OpenHeaderMenu = (props: PropsType) => {
     );
 };
 
-const Menu = styled.ul<{ headerMenu: boolean }>`
-    display: ${(props) => (props.headerMenu ? 'flex' : 'none')};
+const Menu = styled.ul<{ $headermenu: boolean }>`
+    display: ${(props) => (props.$headermenu ? 'flex' : 'none')};
     flex-direction: column;
     align-items: center;
     justify-content: center;
     row-gap: 100px;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     left: 0;
@@ -53,10 +53,6 @@ const Menu = styled.ul<{ headerMenu: boolean }>`
 
     @media (max-width: ${myTheme.screen.medium}) {
         display: none;
-    }
-
-    li {
-        padding: 20px 0;
     }
 `;
 
@@ -79,7 +75,7 @@ const StyledLink = styled.a`
     font-size: 20px;
 
     &:hover {
-        color: blue;
+        color:  ${myTheme.color.grey};
     }
 
     &::after {
@@ -92,6 +88,6 @@ const StyledLink = styled.a`
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        top: 70px;
+        top: 60px;
     }
 `;
