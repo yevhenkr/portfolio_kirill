@@ -35,9 +35,11 @@ export function About(props: AboutType) {
                 <CommercialWrap>
                     <CommercialCount>4</CommercialCount>
                     <CommercialLeftTextWrap>
-                        <p>years</p>
-                        <p>of commercial</p>
-                        <p>experience</p>
+                        <span>years</span>
+                        <div>
+                            <p>of commercial</p>
+                            <p>experience</p>
+                        </div>
                     </CommercialLeftTextWrap>
                 </CommercialWrap>
                 <CommercialWrap>
@@ -75,19 +77,21 @@ const CommercialWrap = styled.div`
     position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    width: 1024px;
 `
 const CommercialLeftTextWrap = styled.div`
     position: relative;
     left: -30px;
-    top: 38%;
+    top: 50%;
 `
 const CommercialRightText = styled.span`
     position: absolute;
-    left: -30px;
-    top: 38%;
+    left: 100px;
+    top: 50%;
 `
 const CommercialCount = styled.span`
-    font-family: Jost,serif;
+    font-family: Jost, serif;
     font-size: 230px;
     color: ${myTheme.color.grey};
 `
@@ -99,6 +103,7 @@ const AboutWrapper = styled.section`
     color: ${myTheme.color.white};
     background-color: ${myTheme.color.backGround};
     padding-top: 90px;
+    align-items: center;
 `;
 
 const AboutDescription = styled.div`
@@ -146,7 +151,7 @@ const TitleText = styled.h2`
     position: relative;
     z-index: 1;
     text-align: center;
-    font-family: Jost,serif;
+    font-family: Jost, serif;
     line-height: 180.03px;
     letter-spacing: -0.04em;
     text-transform: uppercase;
