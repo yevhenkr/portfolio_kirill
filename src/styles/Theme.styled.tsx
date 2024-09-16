@@ -37,5 +37,6 @@ export const myTheme = {
 export const mySections = [
         ['#About','About'],
         ['#Portfolio', 'Portfolio'],
+        ['#Testimonials', 'Testimonials'],
         ['#Contact', 'Contact'],
     ]

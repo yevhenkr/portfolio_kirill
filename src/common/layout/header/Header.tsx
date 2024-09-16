@@ -1,18 +1,20 @@
-import { useRef, useState } from 'react';
+import {useRef, useState} from 'react';
 import styled from "styled-components";
-import { FlexWrapper } from '../../ui/flefWrapper/FlexWrapper';
-import { myTheme } from "../../../styles/Theme.styled.tsx";
-import { BurgerIcon } from "../../../assets/icons/burgerIcon.tsx";
+import {FlexWrapper} from '../../ui/flefWrapper/FlexWrapper';
+import {myTheme} from "../../../styles/Theme.styled.tsx";
+import {BurgerIcon} from "../../../assets/icons/burgerIcon.tsx";
+import {OpenHeaderMenu} from "./headerMenu/OpenHeaderMenu.tsx";
 
 type HeaderType = {
     isaboutattop: boolean;
+    openMenu?: ()=>boolean;
 };
 
-export const Header = ({ isaboutattop }: HeaderType) => {
+export const Header = ({isaboutattop}: HeaderType) => {
     const headerRef = useRef<HTMLDivElement>(null);
-    const [squares, setSquares] = useState<boolean>(false);
+    const [headerMenu, setHeaderMenu] = useState<boolean>(false);
     const handleClick = () => {
-        setSquares(!squares);
+        setHeaderMenu(!headerMenu);
     };
 
     return (
@@ -21,10 +23,11 @@ export const Header = ({ isaboutattop }: HeaderType) => {
                 <FlexWrapper $flex_direction={"row"} $display={"flex"}>
                     <NameSpan>Kirill Y.</NameSpan>
                     <Burger onClick={handleClick}>
-                        <BurgerIcon color={`${myTheme.color.white}`} />
+                        <BurgerIcon color={`${myTheme.color.white}`}/>
                     </Burger>
                 </FlexWrapper>
             </HeaderWrap>
+            <OpenHeaderMenu headerMenu={headerMenu}/>
         </>
     );
 };
@@ -60,7 +63,7 @@ const HeaderWrap = styled(FlexWrapper)<{ $isAboutAtTop: boolean }>`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: ${({ $isAboutAtTop }) => ($isAboutAtTop ? `${myTheme.color.header}` : `${myTheme.color.transparent}`)};
+    background-color: ${({$isAboutAtTop}) => ($isAboutAtTop ? `${myTheme.color.header}` : `${myTheme.color.transparent}`)};
     transition: background-color 0.6s ease-in-out;
     z-index: 2;
 `;
