@@ -3,12 +3,16 @@ import {mySections, myTheme} from "../../../../styles/Theme.styled.tsx";
 // import {heightMenu, mySections, myTheme} from "../../../../../styles/Theme.styled";
 
 type PropsType = {
-    headermenu: boolean;
+    headerMenu: boolean;
+    closeBurger: ()=>void;
+    goToSection: ()=>void;
 };
 
 export const OpenHeaderMenu = (props: PropsType) => {
     const handleClick = (id: string) => {
         const element = document.getElementById(id);
+        console.log(element)
+        props.goToSection();
         if (element) {
             // const offset = props.height;
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
@@ -23,7 +27,7 @@ export const OpenHeaderMenu = (props: PropsType) => {
     };
 
     return (
-        <Menu $headermenu={props.headermenu}>
+        <Menu $headermenu={props.headerMenu}>
             {mySections.map((section, index) => (
                 <StyledLi key={index} onClick={() => handleClick(section[1])}>
                     <StyledLink>

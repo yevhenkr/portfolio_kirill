@@ -24,6 +24,9 @@ export const Header = (props: HeaderType) => {
             props.setHeadMenuOpen(newMenuState);
         }
     };
+    const goToSection = () => {
+        handleClick()
+    }
 
     useEffect(() => {
         setRightBurger(headerMenu ? myTheme.burgerPosition.open : myTheme.burgerPosition.close);
@@ -39,7 +42,7 @@ export const Header = (props: HeaderType) => {
                     </Burger>
                 </FlexWrapper>
             </HeaderWrap>
-            <OpenHeaderMenu headermenu={headerMenu} />
+            <OpenHeaderMenu headerMenu={headerMenu} goToSection={goToSection}/>
         </>
     );
 };
