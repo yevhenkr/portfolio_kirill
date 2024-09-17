@@ -5,6 +5,7 @@ import {InstagramIcon} from "../../../../assets/icons/instagramIcon.tsx";
 import {LinkedinIcon} from "../../../../assets/icons/linkedinIcon.tsx";
 import {TelegramIcon} from "../../../../assets/icons/telegramIcon.tsx";
 import {VimeoIcon} from "../../../../assets/icons/vimeoIcon.tsx";
+import {WhatsappIcon} from "../../../../assets/icons/whatsappIcon.tsx";
 
 const SocialMediaIcons = () => {
     return (
@@ -30,10 +31,19 @@ const SocialMediaIcons = () => {
                 </SocialLink>
             </SocialItem>
 
-
             <SocialItem>
                 <SocialLink href={'https://t.me/Kiwi_Media'} rel={'noreferrer'}>
                     <VimeoIcon fill={`${myTheme.color.grey}`}/>
+                </SocialLink>
+            </SocialItem>
+            <SocialItem>
+                <SocialLink href={'https://t.me/Kiwi_Media'} rel={'noreferrer'}>
+                    <WhatsappIcon fill={`${myTheme.color.grey}`}/>
+                </SocialLink>
+            </SocialItem>
+            <SocialItem>
+                <SocialLink href={'https://t.me/Kiwi_Media'} rel={'noreferrer'}>
+                    <TelegramIcon fill={`${myTheme.color.grey}`}/>
                 </SocialLink>
             </SocialItem>
 
