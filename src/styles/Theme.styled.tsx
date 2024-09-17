@@ -32,13 +32,7 @@ export const myTheme = {
         small: "576px",
     },
     headerHeight: "110px",
-
-    burgerPosition: {
-        close: "100px",
-        open: "117px"
-    }
 }
-
 
 export const mySections = [
     ['#About', 'About'],

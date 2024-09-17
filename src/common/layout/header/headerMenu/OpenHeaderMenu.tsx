@@ -1,29 +1,19 @@
 import styled from "styled-components";
 import {mySections, myTheme} from "../../../../styles/Theme.styled.tsx";
-// import {heightMenu, mySections, myTheme} from "../../../../../styles/Theme.styled";
 
 type PropsType = {
     headerMenu: boolean;
-    closeBurger: ()=>void;
-    goToSection: ()=>void;
+    goToSection: (elementPosition: number) => void; // Изменяем тип goToSection
 };
 
 export const OpenHeaderMenu = (props: PropsType) => {
     const handleClick = (id: string) => {
         const element = document.getElementById(id);
-        console.log(element)
-        props.goToSection();
         if (element) {
-            // const offset = props.height;
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-            // window.scrollTo({
-            //     top: (elementPosition - heightMenu.large),
-            //     behavior: "smooth"
-            // });
+            // Передаем позицию элемента в функцию goToSection
+            props.goToSection(elementPosition);
         }
-        // if (props.closeMobileMenu) {
-        //     props.closeMobileMenu();
-        // }
     };
 
     return (
@@ -51,7 +41,7 @@ const Menu = styled.ul<{ $headermenu: boolean }>`
     left: 0;
     bottom: 0;
     background-color: ${myTheme.color.backGround};
-    z-index: 1;
+    z-index: 3;
     color: ${myTheme.color.grey};
     overflow: hidden;
 
