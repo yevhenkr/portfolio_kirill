@@ -45,9 +45,6 @@ const Menu = styled.ul<{ $headermenu: boolean }>`
     color: ${myTheme.color.grey};
     overflow: hidden;
 
-    @media (max-width: ${myTheme.screen.medium}) {
-        display: none;
-    }
 `;
 
 const StyledLi = styled.li`

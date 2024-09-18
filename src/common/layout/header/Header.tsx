@@ -52,6 +52,9 @@ const Burger = styled.a`
     right: 100px;
     top: 50%;
     transform: translateY(-50%);
+    @media (max-width: ${myTheme.screen.extraSM}) {
+        right: 26px;
+    }
 `;
 
 const NameSpan = styled.span`
@@ -62,6 +65,10 @@ const NameSpan = styled.span`
     top: 50%;
     color: ${myTheme.color.white};
     transform: translateY(-50%);
+    @media (max-width: ${myTheme.screen.extraSM}) {
+        left: 32px;
+    }
+    
 `;
 
 const HeaderWrap = styled(FlexWrapper)<{ $isAboutAtTop: boolean }>`
@@ -75,4 +82,10 @@ const HeaderWrap = styled(FlexWrapper)<{ $isAboutAtTop: boolean }>`
     background-color: ${({$isAboutAtTop}) => ($isAboutAtTop ? `${myTheme.color.header}` : `${myTheme.color.transparent}`)};
     transition: background-color 0.6s ease-in-out;
     z-index: 4;
+
+    @media (max-width: ${myTheme.screen.extraSM}) {
+        //height:0;
+        //padding-top: 30px;
+        //padding-bottom: 30px;
+    }
 `;
