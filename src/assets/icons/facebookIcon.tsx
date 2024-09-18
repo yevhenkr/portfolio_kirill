@@ -1,16 +1,18 @@
-import * as React from "react"
-import {SVGProps, memo} from "react"
+import * as React from "react";
+import { SVGProps, memo } from "react";
 
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={32}
-        height={32}
-        fill={props.fill || "black"} // Используем fill для цвета иконки
+        width={7}
+        height={14}
+        fill="none"
         {...props}
     >
         <path
-            d="M16 2C8.268 2 2 8.268 2 16c0 6.566 4.52 12.075 10.618 13.588v-9.31H9.731V16h2.887v-1.843c0-4.765 2.156-6.974 6.835-6.974.887 0 2.417.174 3.043.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296 0-3.183.87-3.183 3.13V16h4.573l-.786 4.278h-3.787v9.619C24.628 29.06 30 23.157 30 16c0-7.732-6.268-14-14-14Z"/>
+            fill="#fff"
+            d="M.224 7.456h1.518v6.318c0 .125.1.226.224.226h2.576a.225.225 0 0 0 .223-.226V7.486h1.746c.114 0 .21-.086.222-.2l.265-2.326a.227.227 0 0 0-.055-.176.223.223 0 0 0-.167-.075h-2.01V3.25c0-.44.233-.663.695-.663h1.315A.225.225 0 0 0 7 2.362V.227c0-.124-.1-.225-.224-.225H4.964C4.951 0 4.923 0 4.881 0c-.314 0-1.407.062-2.27.865-.958.89-.825 1.954-.793 2.139v1.705H.224A.225.225 0 0 0 0 4.934v2.297c0 .124.1.225.224.225Z"
+        />
     </svg>
-)
-export const FacebookIcon = memo(SvgComponent)
+);
+export const FacebookIcon = memo(SvgComponent);

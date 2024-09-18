@@ -30,6 +30,7 @@ export const myTheme = {
         large: "992px",
         medium: "768px",
         small: "576px",
+        extraSM: "320px"
     },
     headerHeight: "110px",
 }
