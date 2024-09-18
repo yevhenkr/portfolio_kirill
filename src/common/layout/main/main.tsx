@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { myTheme } from "../../../styles/Theme.styled";
 import photo from "../../../assets/img/photoUser.webp"; // Импортируйте изображение
+import smallPhoto from "../../../assets/img/photoUserSmall.webp"; // Импортируйте изображение
 
 export const Main = () => {
     return (
@@ -30,11 +31,16 @@ const FullScreenBackground = styled.main`
     font-weight: bold;
     font-size: 40px;
     background-image: url(${photo});
-    background-size: cover; /* Используйте cover, чтобы изображение заполняло весь контейнер */
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
     box-sizing: border-box;
+    @media (max-width: ${myTheme.screen.extraSM}) {
+        background-image: url(${smallPhoto});
+        background-size: contain;
+        background-position: top;
+    }
 `;
 const MainText = styled.div`
     max-width: 1000px;
@@ -45,6 +51,12 @@ const MainText = styled.div`
     margin-left: 320px; /* Убирает левый отступ */
     padding: 0; /* Убирает внутренние отступы */
     width: 100%; /* Убедитесь, что контейнер занимает всю ширину родителя */
+    @media (max-width: ${myTheme.screen.extraSM}) {
+        
+        padding-top: 120px;
+        margin-top: 0; /* Убирает левый отступ */
+        margin-left: 35px; /* Убирает левый отступ */
+    }
 `;
 
 const StyledH1 = styled.h1`
@@ -59,6 +71,11 @@ const StyledH1 = styled.h1`
     letter-spacing: -0.04em;
     text-align: left;
     padding-bottom: 34px;
+    @media (max-width: ${myTheme.screen.extraSM}) {
+        font-size: 34px;
+        line-height: 1;
+        
+    }
 `;
 
 const StyledH2 = styled.h2`
@@ -68,6 +85,9 @@ const StyledH2 = styled.h2`
     color: ${myTheme.color.white};
     margin: 0; /* Убирает внешние отступы, которые могут влиять на выравнивание */
     padding: 0; /* Убирает внутренние отступы, которые могут влиять на выравнивание */
+    @media (max-width: ${myTheme.screen.extraSM}) {
+        font-size: 38px;
+    }
 `;
 
 const StyledSpan = styled.span`
@@ -91,6 +111,10 @@ const StyledSpan = styled.span`
         width: 0;
         height: 0;
     }
+
+    @media (max-width: ${myTheme.screen.extraSM}) {
+        font-size: 12px;
+    }
 `;
 
 const StyledP = styled.p`
@@ -103,11 +127,14 @@ const StyledP = styled.p`
 
 const SocialLink = styled.a`
     display: flex;
-    color: ${myTheme.color.white};
+    color: ${myTheme.color.yellow};
     padding: 18px 52px;
-    border: 1px solid red;
+    border: 1px solid ${myTheme.color.yellow};
     border-radius: 4px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    @media (max-width: ${myTheme.screen.extraSM}) {
+        font-size: 12px;
+    }
 `
