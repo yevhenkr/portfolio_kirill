@@ -41,11 +41,11 @@ export function App() {
         <AppStyle>
             <Header isAboutTop={isabbutattop} setHeadMenuOpen={setModalOpen}/> {/* Исправляем на camelCase */}
             <Main />
-            <About setIsAboutAtTop={setIsabbutattop} />
-            <Portfolio />
-            <Testimonials/>
-            <Contact />
-            <Footer />
+            {/*<About setIsAboutAtTop={setIsabbutattop} />*/}
+            {/*<Portfolio />*/}
+            {/*<Testimonials/>*/}
+            {/*<Contact />*/}
+            {/*<Footer />*/}
         </AppStyle>
     );
 }
