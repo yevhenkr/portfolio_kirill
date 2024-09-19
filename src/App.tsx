@@ -42,8 +42,8 @@ export function App() {
         <AppStyle>
             <Header isAboutTop={isabbutattop} setHeadMenuOpen={setModalOpen}/> {/* Исправляем на camelCase */}
             <Main />
-            {/*<About setIsAboutAtTop={setIsabbutattop} />*/}
-            {/*<Portfolio />*/}
+            <About setIsAboutAtTop={setIsabbutattop} />
+            <Portfolio />
             <Achievement/>
             <Testimonials/>
             <Contact />
