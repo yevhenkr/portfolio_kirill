@@ -67,6 +67,7 @@ const ButtonWrapper = styled.div`
     display: flex;
     position: relative;
     column-gap: 40px;
+    right: 80px;
 `
 const Sound = styled.button`
     display: flex;
@@ -81,6 +82,7 @@ const NameSpan = styled.span`
     align-items: center;
     position: relative;
     color: ${myTheme.color.white};
+    left: 80px;
     @media (max-width: ${myTheme.screen.extraSM}) {
     }
 `;
@@ -92,7 +94,9 @@ const HeaderWrap = styled(FlexWrapper)<{ $isAboutAtTop: boolean }>`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1756px;
+    //max-width: 1756px;
+    padding-left:80px;
+    padding-right:80px;
     width: 100%;
     background-color: ${({$isAboutAtTop}) => ($isAboutAtTop ? `${myTheme.color.header}` : `${myTheme.color.transparent}`)};
     transition: background-color 0.6s ease-in-out;
