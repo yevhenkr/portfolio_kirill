@@ -53,7 +53,7 @@ const Burger = styled.a`
     top: 50%;
     transform: translateY(-50%);
     @media (max-width: ${myTheme.screen.extraSM}) {
-        right: 26px;
+        right: 32px;
     }
 `;
 
