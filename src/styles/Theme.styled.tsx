@@ -1,6 +1,7 @@
 export const myTheme = {
     color: {
         black: '#000000',
+        greyWhite: '#e2e2e2',
         grey: '#8C8C8C',
         greyBigNumber: '#545454',
         yellow: '#ffcf45',

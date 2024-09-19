@@ -8,6 +8,7 @@ import {Contact} from "./common/layout/section/contact/Contact";
 import {Footer} from "./common/layout/footer/Footer.tsx";
 import {useEffect, useState} from "react";
 import {Testimonials} from "./common/layout/section/testimonials/Testimonials.tsx";
+import {Achievement} from "./common/layout/section/achievement/Achievement.tsx";
 
 
 export function App() {
@@ -43,9 +44,10 @@ export function App() {
             <Main />
             {/*<About setIsAboutAtTop={setIsabbutattop} />*/}
             {/*<Portfolio />*/}
-            {/*<Testimonials/>*/}
-            {/*<Contact />*/}
-            {/*<Footer />*/}
+            <Achievement/>
+            <Testimonials/>
+            <Contact />
+            <Footer />
         </AppStyle>
     );
 }
@@ -59,6 +61,7 @@ const AppStyle = styled.div`
     font-family: Poppins, sans-serif;
     font-weight: ${myTheme.font.weights.regular};
     font-size: 35px;
+    background-color: ${myTheme.color.backGround};;
 
     @media (max-width: ${myTheme.screen.medium}) {
         max-width: 768px;
