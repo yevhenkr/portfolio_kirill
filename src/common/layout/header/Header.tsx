@@ -1,11 +1,10 @@
-import {useEffect, useRef, useState} from 'react';
+import {useRef, useState} from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from '../../ui/flefWrapper/FlexWrapper';
 import {myTheme} from "../../../styles/Theme.styled.tsx";
 import {BurgerIcon} from "../../../assets/icons/burgerIcon.tsx";
 import {OpenHeaderMenu} from "./headerMenu/OpenHeaderMenu.tsx";
-import {SoundOnIcon} from "../../../assets/icons/SoundOnIcon.tsx";
-import {SoundOffIcon} from "../../../assets/icons/SoundOffIcon.tsx";
+import {CustomAudioPlayer} from "../../ui/customAudioPlayer/CustomAudioPlayer.tsx";
 
 type HeaderType = {
     isAboutTop: boolean;
@@ -15,15 +14,10 @@ type HeaderType = {
 export const Header = (props: HeaderType) => {
     const headerRef = useRef<HTMLDivElement>(null);
     const [headerMenu, setHeaderMenu] = useState<boolean>(false);
-    const [isSound, setSound] = useState<boolean>(false)
 
     const handleClick = () => {
         const newMenuState = !headerMenu;
         setHeaderMenu(newMenuState);
-    };
-
-    const changeSound = () => {
-        setSound(!isSound)
     };
 
     const goToSection = (elementPosition: number) => {
@@ -36,22 +30,13 @@ export const Header = (props: HeaderType) => {
             });
         }, 0);
     };
-    // useEffect(() => {
-    //     // document.documentElement.setAttribute('data-theme', theme)
-    // }, [isSound])
 
     return (
         <>
             <HeaderWrap $isAboutAtTop={props.isAboutTop} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
                 <NameSpan>Kirill Y.</NameSpan>
-                <audio controls >
-                    <source src={"../../../assets/audio/Infinity.mp3"}/>
-                </audio>
                 <ButtonWrapper>
-                    <Sound onClick={changeSound}>
-                        {isSound ? <SoundOffIcon color={`${myTheme.color.white}`}/> :
-                            <SoundOnIcon color={`${myTheme.color.white}`}/>}
-                    </Sound>
+                    <CustomAudioPlayer/>
                     <Burger onClick={handleClick}>
                         <BurgerIcon color={`${myTheme.color.white}`}/>
                     </Burger>
