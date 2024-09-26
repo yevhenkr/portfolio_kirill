@@ -44,9 +44,13 @@ export const Header = (props: HeaderType) => {
         <>
             <HeaderWrap $isAboutAtTop={props.isAboutTop} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
                 <NameSpan>Kirill Y.</NameSpan>
+                <audio controls >
+                    <source src={"../../../assets/audio/Infinity.mp3"}/>
+                </audio>
                 <ButtonWrapper>
                     <Sound onClick={changeSound}>
-                        {isSound ? <SoundOffIcon color={`${myTheme.color.white}`}/> : <SoundOnIcon color={`${myTheme.color.white}`}/>}
+                        {isSound ? <SoundOffIcon color={`${myTheme.color.white}`}/> :
+                            <SoundOnIcon color={`${myTheme.color.white}`}/>}
                     </Sound>
                     <Burger onClick={handleClick}>
                         <BurgerIcon color={`${myTheme.color.white}`}/>
@@ -94,7 +98,6 @@ const HeaderWrap = styled(FlexWrapper)<{ $isAboutAtTop: boolean }>`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //max-width: 1756px;
     padding-left:80px;
     padding-right:80px;
     width: 100%;
