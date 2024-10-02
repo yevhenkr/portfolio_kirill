@@ -54,22 +54,17 @@ const StyledSection = styled.section`
     width: 100%;
     //height: 300px; // Задаем фиксированную высоту для контейнера
     position: relative;
-    background-color:  ${myTheme.color.white};
     display: flex;
     flex-direction: column;
     gap: 60px;
     z-index: 1;
     background-color: ${myTheme.color.backGround};
-    background-image: url("../../../../../src/assets/img/Testimonions.png"); /* Путь к вашему фоновому изображению */
-    background-size: cover; /* Обрезает изображение, чтобы оно полностью заполнило фон */
-    background-position: center; /* Центрирует изображение по центру фона */
-    background-repeat: no-repeat; /* Отключает повторение изображения */
+    background-image: url("../../../../../src/assets/img/Testimonions.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     @media (max-width: ${myTheme.screen.medium}) {
         height: 200px;
-    }
-
-    .swiper-button-next, .swiper-button-prev {
-        color: ${myTheme.color.white}; // Замените на желаемый цвет стрелок
     }
 `;
 

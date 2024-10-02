@@ -1,4 +1,4 @@
-import { SwiperSlide } from "swiper/react";
+import {SwiperSlide} from "swiper/react";
 import styled from "styled-components";
 
 type PropsType = {
@@ -22,7 +22,8 @@ export function Testimonial(props: PropsType) {
 }
 
 const StyledImg = styled.img`
-padding-bottom: 9px`
+    padding-bottom: 9px`
+
 const StyledContent = styled.div`
     display: flex;
     flex-direction: column;
@@ -34,7 +35,7 @@ const StyledContent = styled.div`
 
 const StyledP = styled.p`
     font-size: 28px;
-   padding-bottom: 50px;
+    padding-bottom: 50px;
 `;
 
 const StyledSpan = styled.span`

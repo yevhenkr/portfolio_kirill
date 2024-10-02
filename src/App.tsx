@@ -9,6 +9,8 @@ import {Footer} from "./common/layout/footer/Footer.tsx";
 import {useEffect, useState} from "react";
 import {Testimonials} from "./common/layout/section/testimonials/Testimonials.tsx";
 import {Achievement} from "./common/layout/section/achievement/Achievement.tsx";
+import {SwiperPortfolio} from "./common/layout/section/portfolio/SwiperPortfolio.tsx";
+import {SwiperPortfolioWSV} from "./common/layout/section/portfolio/SwiperPortfolioWSV.tsx";
 
 
 export function App() {
@@ -44,6 +46,7 @@ export function App() {
             <Main />
             <About setIsAboutAtTop={setIsabbutattop} />
             <Portfolio />
+            <SwiperPortfolio/>
             <Achievement/>
             <Testimonials/>
             <Contact />

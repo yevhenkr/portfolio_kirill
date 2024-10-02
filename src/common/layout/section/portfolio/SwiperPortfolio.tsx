@@ -1,106 +1,110 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import classRoom from "../../../../assets/video/Classroom.mp4";
 
 import styled from "styled-components";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
 import {Navigation} from "swiper/modules";
-import classRoom from "../../../../assets/video/Classroom.mp4";
+import {Title} from "../../../ui/title/Title.tsx";
+import {useState} from "react";
+
 
 export function SwiperPortfolio() {
+    // Хранение состояния, чтобы контролировать взаимодействие
+    const [isInteracting, setIsInteracting] = useState(false);
+
     return (
-        <StyledSection>
+        <StyledSection id={'Testimonials'}>
+            <Title title={"Testimonials"} smallText={"what clients says"} />
             <Swiper
-                slidesPerView={1.5}
-                spaceBetween={20}
                 navigation={true}
-                loop={true}
-                centeredSlides={true}
+                allowSlidePrev={true}
                 modules={[Navigation]}
+                loop={true}
+                slidesPerView={3}
+                grabCursor={!isInteracting} // Включаем "руку", если не взаимодействуем с видео
+                style={{display: "flex", justifyContent: "center", maxWidth: "1160px"}}
                 className="mySwiper"
-                style={{maxWidth: "540px", padding: '0 15px'}} // Установлена максимальная ширина
             >
-                <StyledSwiperSlide  style={{width: "100%", height:"100%"}}>
-                    <VideoWrapper>
-                        <StyledVideo
-                            src={classRoom} // Укажите путь к вашему видео
-                            controls
-                        />
-                    </VideoWrapper>
-                </StyledSwiperSlide>
-                <StyledSwiperSlide style={{width: "100%", height:"100%"}}>
+                <SwiperSlide>
                     <VideoWrapper>
                         <StyledVideo
                             src={classRoom}
                             controls
+                            onMouseEnter={() => setIsInteracting(true)}  // Отключаем возможность листать Swiper, когда мышь на видео
+                            onMouseLeave={() => setIsInteracting(false)} // Включаем возможность листать, когда мышь уходит с видео
                         />
                     </VideoWrapper>
-                </StyledSwiperSlide>
-                <StyledSwiperSlide style={{width: "100%", height:"100%"}}>
+                </SwiperSlide>
+                <SwiperSlide>
                     <VideoWrapper>
                         <StyledVideo
                             src={classRoom}
                             controls
+                            onMouseEnter={() => setIsInteracting(true)}
+                            onMouseLeave={() => setIsInteracting(false)}
                         />
                     </VideoWrapper>
-                </StyledSwiperSlide>
-                <StyledSwiperSlide style={{width: "100%", height:"100%"}}>
+                </SwiperSlide>
+                <SwiperSlide>
                     <VideoWrapper>
                         <StyledVideo
                             src={classRoom}
                             controls
+                            onMouseEnter={() => setIsInteracting(true)}
+                            onMouseLeave={() => setIsInteracting(false)}
                         />
                     </VideoWrapper>
-                </StyledSwiperSlide>
-                {/*<SwiperSlide>*/}
-                {/*    <StyledDiv>*/}
-                {/*        <PortfolioCard link={"https://player.vimeo.com/video/1004127210"}/>*/}
-                {/*    </StyledDiv>*/}
-                {/*</SwiperSlide>*/}
+                </SwiperSlide>
+                <SwiperSlide>
+                    <VideoWrapper>
+                        <StyledVideo
+                            src={classRoom}
+                            controls
+                            onMouseEnter={() => setIsInteracting(true)}
+                            onMouseLeave={() => setIsInteracting(false)}
+                        />
+                    </VideoWrapper>
+                </SwiperSlide>
             </Swiper>
         </StyledSection>
     );
 }
 
 const StyledSection = styled.section`
-   
     color: ${myTheme.color.white};;
-    padding-bottom: 100px;
+    padding-bottom: 145px;
+    max-width: 100%;
     width: 100%;
-    background-color: ${myTheme.color.white};
+    position: relative;
     display: flex;
+    flex-direction: column;
+    gap: 60px;
     z-index: 1;
     background-color: ${myTheme.color.backGround};
+    background-image: url("../../../../../src/assets/img/Testimonions.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     @media (max-width: ${myTheme.screen.medium}) {
         height: 200px;
     }
-
-    .swiper-button-next, .swiper-button-prev {
-        color: ${myTheme.color.white};
-    }
-`;
-
-const StyledSwiperSlide = styled(SwiperSlide)`
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
 `;
 
 const VideoWrapper = styled.div`
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    position: relative;
-    overflow: hidden;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-right: 120px;
+    padding-left: 120px;
 `;
 
 const StyledVideo = styled.video`
     max-width: 100%;
     max-height: 100%;
     height: auto;
-    border-radius: 8px;
     border: none;
     object-fit: contain;
 `;
