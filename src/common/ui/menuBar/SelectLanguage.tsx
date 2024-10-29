@@ -70,7 +70,7 @@ const StyleSelect = styled(Select)`
 const StyleItem = styled(SelectItem)`
     outline: none;
     position: relative;
-
+    cursor: default;
     &:hover {
         &:after {
             content: '';
