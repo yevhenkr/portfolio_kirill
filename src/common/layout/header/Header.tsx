@@ -5,6 +5,7 @@ import {myTheme} from "../../../styles/Theme.styled.tsx";
 import {BurgerIcon} from "../../../assets/icons/burgerIcon.tsx";
 import {OpenHeaderMenu} from "./headerMenu/OpenHeaderMenu.tsx";
 import {CustomAudioPlayer} from "../../ui/customAudioPlayer/CustomAudioPlayer.tsx";
+import SelectLanguage from "../../ui/menuBar/SelectLanguage.tsx";
 
 type HeaderType = {
     isAboutTop: boolean;
@@ -35,6 +36,7 @@ export const Header = (props: HeaderType) => {
         <>
             <HeaderWrap $isAboutAtTop={props.isAboutTop} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
                 <NameSpan>Kirill Y.</NameSpan>
+                {headerMenu ? <SelectLanguage/> : ""}
                 <ButtonWrapper>
                     <CustomAudioPlayer/>
                     <Burger onClick={handleClick}>
@@ -42,6 +44,7 @@ export const Header = (props: HeaderType) => {
                     </Burger>
                 </ButtonWrapper>
             </HeaderWrap>
+
             <OpenHeaderMenu headerMenu={headerMenu} goToSection={goToSection}/>
         </>
     );
@@ -83,8 +86,8 @@ const HeaderWrap = styled(FlexWrapper)<{ $isAboutAtTop: boolean }>`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left:80px;
-    padding-right:80px;
+    padding-left: 80px;
+    padding-right: 80px;
     width: 100%;
     background-color: ${({$isAboutAtTop}) => ($isAboutAtTop ? `${myTheme.color.header}` : `${myTheme.color.transparent}`)};
     transition: background-color 0.6s ease-in-out;

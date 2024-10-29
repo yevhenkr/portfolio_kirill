@@ -10,7 +10,6 @@ import {useEffect, useState} from "react";
 import {Testimonials} from "./common/layout/section/testimonials/Testimonials.tsx";
 import {Achievement} from "./common/layout/section/achievement/Achievement.tsx";
 import {SwiperPortfolio} from "./common/layout/section/portfolio/SwiperPortfolio.tsx";
-import {SwiperPortfolioWSV} from "./common/layout/section/portfolio/SwiperPortfolioWSV.tsx";
 
 
 export function App() {
@@ -42,15 +41,15 @@ export function App() {
 
     return (
         <AppStyle>
-            <Header isAboutTop={isabbutattop} setHeadMenuOpen={setModalOpen}/> {/* Исправляем на camelCase */}
-            <Main />
-            <About setIsAboutAtTop={setIsabbutattop} />
-            <Portfolio />
+            <Header isAboutTop={isabbutattop} setHeadMenuOpen={setModalOpen}/>
+            <Main/>
+            <About setIsAboutAtTop={setIsabbutattop}/>
+            <Portfolio/>
             <SwiperPortfolio/>
             <Achievement/>
             <Testimonials/>
-            <Contact />
-            <Footer />
+            <Contact/>
+            <Footer/>
         </AppStyle>
     );
 }
