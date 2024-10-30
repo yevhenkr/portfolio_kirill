@@ -2,6 +2,7 @@ import {useEffect, useRef} from 'react';
 import styled from "styled-components";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
 import {Skill} from "../../../ui/skill/Skill.tsx";
+import {CommercialCount} from "../../../ui/commercialCount/CommercialCount.tsx";
 
 type AboutType = {
     setIsAboutAtTop: (value: boolean) => void;
@@ -27,13 +28,13 @@ export function About(props: AboutType) {
         return () => {
             window.removeEventListener('scroll', handleScroll); // Удаляем слушатель при размонтировании
         };
-    }, []);
+    }, );
 
     return (
         <AboutWrapper ref={aboutRef} id={'About'}>
             <CommercialWrap>
                 <CommercialWrap>
-                    <CommercialCount>4</CommercialCount>
+                    <CommercialCount speed={500} addCount={1} sign={""} count={4}/>
                     <CommercialLeftTextWrap>
                         <span>years</span>
                         <div>
@@ -43,10 +44,9 @@ export function About(props: AboutType) {
                     </CommercialLeftTextWrap>
                 </CommercialWrap>
                 <CommercialWrap>
-                    <CommercialCount>600+</CommercialCount>
+                    <CommercialCount speed={50} addCount={10} sign={"+"} count={600}/>
                     <CommercialRightText>successful sales</CommercialRightText>
                 </CommercialWrap>
-                <div></div>
             </CommercialWrap>
             <TextContainer>
                 <TextWrap>
@@ -77,27 +77,23 @@ const CommercialWrap = styled.div`
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     width: 1024px;
+    //width: 1320px;
 `
 const CommercialLeftTextWrap = styled.div`
-    position: relative;
+    position: absolute;
     color: ${myTheme.color.yellow};
-    left: -30px;
+    left: 128px;
     top: 50%;
 `
 const CommercialRightText = styled.span`
     font-family: Inconsolata, serif;
     text-transform: uppercase;
     position: absolute;
-    left: 100px;
+    right: 120px;
     top: 50%;
     color: ${myTheme.color.yellow};
-`
-const CommercialCount = styled.span`
-    font-family: Jost, serif;
-    font-size: 230px;
-    color: ${myTheme.color.greyBigNumber};
 `
 
 const AboutWrapper = styled.section`
