@@ -34,7 +34,7 @@ export const Header = (props: HeaderType) => {
 
     return (
         <>
-            <HeaderWrap $isAboutAtTop={props.isAboutTop} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
+            <HeaderWrap $isAboutAtTop={props.isAboutTop && !headerMenu} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
                 <NameSpan>Kirill Y.</NameSpan>
                 {headerMenu ? <SelectLanguage/> : ""}
                 <ButtonWrapper>
