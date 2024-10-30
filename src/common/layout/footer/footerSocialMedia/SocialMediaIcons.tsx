@@ -32,7 +32,7 @@ const SocialMediaIcons = () => {
             </SocialItem>
 
             <SocialItem>
-                <SocialLink href={'https://t.me/Kiwi_Media'} rel={'noreferrer'}>
+                <SocialLink href={'https://vimeo.com/kirillyakubov'} rel={'noreferrer'}>
                     <VimeoIcon fill={`${myTheme.color.grey}`}/>
                 </SocialLink>
             </SocialItem>
