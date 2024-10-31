@@ -7,7 +7,7 @@ export function Footer() {
         <FooterStyle>
             <FooterWrapper>
                 <SocialMediaIcons/>
-                <SmallStyled>Template designed by : Templates Jungle</SmallStyled>
+                <SmallStyled>© Kirill Yakubov, 2024. All Rights Reservede</SmallStyled>
             </FooterWrapper>
         </FooterStyle>
     )
