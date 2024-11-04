@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {myTheme} from "../../../../styles/Theme.styled.tsx";
-import {TelegramIcon} from "../../../../assets/icons/telegramIcon.tsx";
-import {WhatsappIcon} from "../../../../assets/icons/whatsappIcon.tsx";
+import {CopyText} from "../../../ui/copyText/CopyText.tsx";
 
 export function Contact() {
     const handleClick = (id: string) => {
@@ -21,7 +20,10 @@ export function Contact() {
                 <SubscribeStyled>
                     <PStyled>Just feel free to contact if you wanna collaborate with me, or simply have a
                         conversation.</PStyled>
-                    <Mail>kirill.yakubov@gmail.com</Mail>
+                    <WrapperEmailStyled>
+                        <Mail>kirill.yakubov@gmail.com</Mail>
+                        <CopyText/>
+                    </WrapperEmailStyled>
                 </SubscribeStyled>
                 <UlStyled>
                     <LinkStyled><AStyled onClick={() => handleClick("Home")}>Home </AStyled></LinkStyled>
@@ -36,11 +38,20 @@ export function Contact() {
     );
 }
 
+const WrapperEmailStyled = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    right: 1px;
+`
+
+
 const Mail = styled.span`
     position: relative;
     display: inline-block;
     padding-bottom: 6px; /* Отступ от текста до линии */
-margin-bottom: 40px;
+    margin-bottom: 40px;
+
     &::after {
         content: '';
         position: absolute;
@@ -49,7 +60,7 @@ margin-bottom: 40px;
         right: 0;
         bottom: 0;
         height: 2px;
-        background-color:  ${myTheme.color.white};
+        background-color: ${myTheme.color.white};
     }
 `
 const UlStyled = styled.ul`
@@ -68,7 +79,7 @@ const LinkStyled = styled.li`
     line-height: 1.2;
 
     :hover {
-        color:  ${myTheme.color.grey};
+        color: ${myTheme.color.grey};
     }`
 const AStyled = styled.a`
     font-size: 17px;
@@ -93,7 +104,7 @@ const DivStyled = styled.div`
 
 const SectionStyled = styled.section`
     padding-top: 160px;
-    color:  ${myTheme.color.white};
+    color: ${myTheme.color.white};
     max-width: 100%;
     width: 100%;
     position: relative;
@@ -126,7 +137,7 @@ const SocialItem = styled.li`
     align-items: center; /* Центрирует содержимое по вертикали */
 `
 const SocialLink = styled.a`
-   display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
