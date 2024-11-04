@@ -36,10 +36,10 @@ export function About(props: AboutType) {
                 <CommercialWrap>
                     <CommercialCount speed={500} addCount={1} sign={""} count={4}/>
                     <CommercialLeftTextWrap>
-                        <span>years</span>
+                        <span>YEARS</span>
                         <div>
-                            <p>of commercial</p>
-                            <p>experience</p>
+                            <p>OF COMMERCIAL</p>
+                            <p>EXPERIENCE</p>
                         </div>
                     </CommercialLeftTextWrap>
                 </CommercialWrap>
@@ -82,16 +82,19 @@ const CommercialWrap = styled.div`
 `
 const CommercialLeftTextWrap = styled.div`
     position: absolute;
+    font-family: Inconsolata, serif;
+    font-size: 30px;
     color: ${myTheme.color.white};
-    left: 128px;
-    top: 50%;
+    left: 148px;
+    line-height: 134%;
+    top: 40%;
 `
 const CommercialRightText = styled.span`
     font-family: Inconsolata, serif;
     text-transform: uppercase;
     position: absolute;
     font-size: 30px;
-    right: 120px;
+    right: 210px;
     top: 50%;
     color: ${myTheme.color.white};
     background-color: ${myTheme.color.backGround};
