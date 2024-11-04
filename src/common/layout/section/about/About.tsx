@@ -79,11 +79,10 @@ const CommercialWrap = styled.div`
     flex-direction: row;
     justify-content: space-between;
     width: 1024px;
-    //width: 1320px;
 `
 const CommercialLeftTextWrap = styled.div`
     position: absolute;
-    color: ${myTheme.color.yellow};
+    color: ${myTheme.color.white};
     left: 128px;
     top: 50%;
 `
@@ -91,9 +90,12 @@ const CommercialRightText = styled.span`
     font-family: Inconsolata, serif;
     text-transform: uppercase;
     position: absolute;
+    font-size: 30px;
     right: 120px;
     top: 50%;
-    color: ${myTheme.color.yellow};
+    color: ${myTheme.color.white};
+    background-color: ${myTheme.color.backGround};
+    padding: 5px 10px;
 `
 
 const AboutWrapper = styled.section`

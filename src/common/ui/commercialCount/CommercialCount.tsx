@@ -31,5 +31,5 @@ export function CommercialCount(props:CommercialCountType) {
 const CommercialCountStyle = styled.span`
     font-family: Jost, serif;
     font-size: 230px;
-    color: ${myTheme.color.greyBigNumber};
+    color: ${myTheme.color.yellow};
 `
