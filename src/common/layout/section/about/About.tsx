@@ -32,6 +32,8 @@ export function About(props: AboutType) {
 
     return (
         <AboutWrapper ref={aboutRef} id={'About'}>
+            <YellowCircleLeft/>
+            <YellowCircleBig/>
             <CommercialWrap>
                 <CommercialWrap>
                     <CommercialCount speed={500} addCount={1} sign={""} count={4}/>
@@ -73,6 +75,47 @@ export function About(props: AboutType) {
     )
 }
 
+const YellowCircleLeft = styled.div`
+    width: 320px;
+    height: 705px;
+    position: absolute;
+    top:15%;
+    left: 0;
+    display: flex;
+    z-index: 1;
+    background-image: url("../../../../../src/assets/img/yellowBlick.png");
+    background-repeat: no-repeat;
+    animation: moveTop 5s ease-in-out infinite alternate;
+    @keyframes moveTop {
+        0% {
+            top: 0%;
+        }
+        100% {
+            top: 32%;
+        }
+    }
+`;
+const YellowCircleBig = styled.div`
+    width: 560px;
+    height: 1293px;
+    position: absolute;
+    
+    right: 0;
+    display: flex;
+    z-index: 2;
+    background-image: url("../../../../../src/assets/img/yellowBlickBig.png");
+    background-repeat: no-repeat;
+    animation: moveTopBig 3s ease-in-out infinite alternate;
+    @keyframes moveTopBig {
+        0% {
+            top: -5%;
+        }
+        100% {
+            top: -20%;
+        }
+    }
+`;
+
 const CommercialWrap = styled.div`
     position: relative;
     display: flex;
@@ -103,6 +146,7 @@ const CommercialRightText = styled.span`
 
 const AboutWrapper = styled.section`
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 100%;
     color: ${myTheme.color.white};
