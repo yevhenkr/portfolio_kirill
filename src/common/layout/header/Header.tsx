@@ -6,6 +6,7 @@ import {BurgerIcon} from "../../../assets/icons/burgerIcon.tsx";
 import {OpenHeaderMenu} from "./headerMenu/OpenHeaderMenu.tsx";
 import {CustomAudioPlayer} from "../../ui/customAudioPlayer/CustomAudioPlayer.tsx";
 import SelectLanguage from "../../ui/menuBar/SelectLanguage.tsx";
+import {LogoIcon} from "../../../assets/icons/logoIcon.tsx";
 
 type HeaderType = {
     isAboutTop: boolean;
@@ -35,7 +36,7 @@ export const Header = (props: HeaderType) => {
     return (
         <>
             <HeaderWrap $isAboutAtTop={props.isAboutTop && !headerMenu} ref={headerRef} $flex_direction={"row"} $display={"flex"}>
-                <NameSpan>Kirill Y.</NameSpan>
+                <WrapperLogo><LogoIcon/></WrapperLogo>
                 {headerMenu ? <SelectLanguage/> : ""}
                 <ButtonWrapper>
                     <CustomAudioPlayer/>
@@ -69,11 +70,10 @@ const Sound = styled.button`
     padding: 0;
 `;
 
-const NameSpan = styled.span`
+const WrapperLogo = styled.div`
     display: flex;
     align-items: center;
     position: relative;
-    color: ${myTheme.color.white};
     left: 80px;
     @media (max-width: ${myTheme.screen.extraSM}) {
     }
