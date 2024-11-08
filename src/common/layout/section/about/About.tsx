@@ -28,7 +28,7 @@ export function About(props: AboutType) {
         return () => {
             window.removeEventListener('scroll', handleScroll); // Удаляем слушатель при размонтировании
         };
-    }, );
+    },);
 
     return (
         <AboutWrapper ref={aboutRef} id={'About'}>
@@ -64,11 +64,11 @@ export function About(props: AboutType) {
                     vision into powerful motion graphics that boost your market presence and drive sales. Partner with
                     me and watch your business soar!</StyledP>
                 <AboutSkills>
-                    <Skill skillName={"after effects"} percentage={"95%"}/>
-                    <Skill skillName={"blender"} percentage={"50%"}/>
-                    <Skill skillName={"Premiere Pro"} percentage={"90%"}/>
-                    <Skill skillName={"Media Encoder"} percentage={"100%"}/>
-                    <Skill skillName={"photoshop"} percentage={"70%"}/>
+                    <Skill skillName={"after effects"} percentage={95}/>
+                    <Skill skillName={"blender"} percentage={50}/>
+                    <Skill skillName={"Premiere Pro"} percentage={90}/>
+                    <Skill skillName={"Media Encoder"} percentage={100}/>
+                    <Skill skillName={"photoshop"} percentage={70}/>
                 </AboutSkills>
             </AboutDescription>
         </AboutWrapper>
@@ -79,7 +79,7 @@ const YellowCircleLeft = styled.div`
     width: 320px;
     height: 705px;
     position: absolute;
-    top:15%;
+    top: 15%;
     left: 0;
     display: flex;
     z-index: 1;
@@ -99,7 +99,7 @@ const YellowCircleBig = styled.div`
     width: 560px;
     height: 1293px;
     position: absolute;
-    
+
     right: 0;
     display: flex;
     z-index: 2;

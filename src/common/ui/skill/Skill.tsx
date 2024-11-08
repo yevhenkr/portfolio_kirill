@@ -1,21 +1,38 @@
 import styled from "styled-components";
-type SkillType ={
+import {useEffect, useState} from "react";
+
+type SkillType = {
     skillName: string
-    percentage: string
+    percentage: number
 }
 
-
 export function Skill(props: SkillType) {
+    const [progress, setProgress] = useState(0);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setProgress(props.percentage);
+        }, 500);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <SkillDiv>
             <span>{props.skillName}</span>
             <BarBackGround>
-                <Bar width={props.percentage}/>
+                <Progress width={progress}/>
             </BarBackGround>
         </SkillDiv>
     )
 
 }
+
+const Progress = styled.div<{ width: number }>`
+    width: ${({width}) => width}%;
+    background-color: #fff;
+    height: 2px;
+    transition: width 2s ease;
+`;
 
 const BarBackGround = styled.div`
     width: 100%;
@@ -24,19 +41,6 @@ const BarBackGround = styled.div`
     height: 1px;
     position: relative;
 `;
-type BarProps = {
-    width?: string; // Опциональный пропс для ширины
-};
-
-const Bar = styled.div<BarProps>`
-    width: ${(props) => props.width }; /* Использует переданную ширину или значение по умолчанию */
-    background-color: #fff;
-    height: 3px;
-    position: absolute; /* Абсолютное позиционирование */
-    top: -2px; /* Смещение выше \`BarBackGround\` */
-    left: 0;
-   
-`;
 
 const SkillDiv = styled.div`
     display: flex;
@@ -44,5 +48,4 @@ const SkillDiv = styled.div`
     width: 100%;
     min-width: 485px;
     font-size: 18px;
-  
 `

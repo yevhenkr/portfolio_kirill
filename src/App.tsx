@@ -10,7 +10,6 @@ import {useEffect, useState} from "react";
 import {Testimonials} from "./common/layout/section/testimonials/Testimonials.tsx";
 import {Achievement} from "./common/layout/section/achievement/Achievement.tsx";
 import {SwiperPortfolio} from "./common/layout/section/portfolio/SwiperPortfolio.tsx";
-import {CopyText} from "./common/ui/copyText/CopyText.tsx";
 
 
 export function App() {
