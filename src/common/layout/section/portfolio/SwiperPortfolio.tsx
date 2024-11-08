@@ -68,6 +68,9 @@ export function SwiperPortfolio() {
                     </VideoWrapper>
                 </SwiperSlide>
             </Swiper>
+            <SocialLink href={'https://github.com/yevhenkr'} rel={'noreferrer'}>
+                view all portfolio
+            </SocialLink>
         </StyledSection>
     );
 }
@@ -87,6 +90,7 @@ const StyledSection = styled.section`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    align-items: center;
     @media (max-width: ${myTheme.screen.medium}) {
         height: 200px;
     }
@@ -108,3 +112,18 @@ const StyledVideo = styled.video`
     border: none;
     object-fit: contain;
 `;
+
+const SocialLink = styled.a`
+    display: flex;
+    max-width: 292px;
+    justify-content: center;
+    color: ${myTheme.color.black};
+    padding: 18px 52px;
+    border-radius: 1px;
+    background-color: ${myTheme.color.yellow};
+    align-items: center;
+    text-decoration: none;
+    @media (max-width: ${myTheme.screen.extraSM}) {
+        font-size: 12px;
+    }
+`
