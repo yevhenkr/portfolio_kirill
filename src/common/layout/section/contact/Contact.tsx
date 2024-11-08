@@ -21,7 +21,7 @@ export function Contact() {
                     <PStyled>Just feel free to contact if you wanna collaborate with me, or simply have a
                         conversation.</PStyled>
                     <WrapperEmailStyled>
-                        <Mail>kirill.yakubov@gmail.com</Mail>
+                        <Mail>kiwi.media.ua@gmail.com</Mail>
                         <CopyText/>
                     </WrapperEmailStyled>
                 </SubscribeStyled>
